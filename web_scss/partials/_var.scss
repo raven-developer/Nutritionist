@@ -1,0 +1,72 @@
+//Font
+@font-face {
+    font-family: 'Urbanist';
+    src: url('../../web_assets/fonts/Urbanist-Regular.woff2') format('woff2'),
+        url('../../web_assets/fonts/Urbanist-Regular.woff') format('woff');
+    font-display: swap;
+}
+
+//Color
+//Dark Green
+$dgreen15: #1A3129;
+$dgreen20: #234338;
+$dgreen25: #2C5446;
+$dgreen30: #346454;
+$dgreen40: #468671;
+$dgreen60: #79B9A4;
+$dgreen80: #BCDCD1;
+$dgreen90: #DDEDE8;
+//-Green
+$green70: #CBEA7B;
+$green75: #D3EE91;
+$green80: #DCF1A7;
+$green85: #E5F5BD;
+$green90: #EEF8D3;
+$green95: #F6FBE9;
+$green97: #FAFDF2;
+$green99: #FDFEFB;
+//Gray
+$gray30: #4C4C4D;
+$gray95: #F2F2F2;
+//Absolute
+$white: #fff;
+$black: #000;
+
+//@Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin urbanist-font($weight, $size, $color) {
+    font-family: "Urbanist", serif;
+    font-optical-sizing: auto;
+    font-weight: $weight;
+    font-style: normal;
+    font-size: $size;
+    color: $color;
+    letter-spacing: 0;
+    text-transform: none;
+    text-decoration: none;
+}
+
+@mixin button-style($bg-color, $text-color) {
+    position: relative;
+    padding: 16px 20px;
+    @include max-width;
+    background-color: $bg-color;
+    height: 100%;
+    border-radius: 8px;
+    transition: all 300ms ease-in-out;
+
+    .w-button-inner {
+        @include urbanist-font(700, 1rem, $text-color);
+        transition: color 200ms ease-in-out;
+    }
+}
+
+@mixin max-width {
+    max-width: 100%;
+    width: 100%;
+}
