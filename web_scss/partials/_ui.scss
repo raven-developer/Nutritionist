@@ -1,0 +1,42 @@
+//This stylesheet is for UI Styles
+@import "var";
+
+.w-section {
+    @include flex-center;
+    position: relative;
+    padding: 75px 0;
+}
+.w-col-section {
+    @include flex-column;
+}
+.w-row-section {
+    @include flex-row;
+}
+.w-col-content {
+    @include flex-column;
+}
+.w-row-content {
+    @include flex-row;
+}
+.w-container {
+    max-width: 1596px;
+    width: 100%;
+    margin: 0 20px;
+}
+.w-inner-col {
+    @include flex-column;
+    width: 50%;
+}
+.w-default-padding {
+    padding: 40px;
+}
+
+.gap-default {
+    gap: 50px
+}
+.gap-large {
+    gap: 70px
+}
+.gap-small {
+    gap: 20px
+}

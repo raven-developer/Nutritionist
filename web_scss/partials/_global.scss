@@ -1,0 +1,47 @@
+//Styles for Global Stlying
+@import "var";
+
+
+h1, h2, h3, h4, h5, h6, p, span, a, .w-paragraph, .w-heading {
+    @include font-family();
+}
+.w-paragraph {
+    @include font-setting(500, normal, 1rem, $gray30);
+    line-height: 1.5;
+}
+.w-heading {
+    line-height: 1.2;
+}
+h1.w-heading{
+    @include font-setting(700, normal, 3.222rem, $dgreen15);
+}
+h2.w-heading{
+    @include font-setting(700, normal, 2.488rem, $dgreen15);
+}
+h3.w-heading{
+    @include font-setting(700, normal, 2.074rem, $dgreen15);
+}
+h4.w-heading{
+    @include font-setting(600, normal, 1.728rem, $dgreen15);
+}
+h5.w-heading{
+    @include font-setting(600, normal, 1.44rem, $dgreen15);
+}
+h6.w-heading{
+    @include font-setting(600, normal, 1.2rem, $dgreen15);
+}
+.w-button {
+    padding: 16px 20px;
+}
+.w-primary-button{
+    @include button-setting($green70);
+}
+.w-secondary-button{
+    @include button-setting($green95);
+    border: 1px solid $green85
+}
+.w-button-inner {
+    @include font-family();
+    @include font-setting(600, normal, 1rem, $dgreen15);
+    line-height: 150%;
+}

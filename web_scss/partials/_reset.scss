@@ -1,3 +1,5 @@
+//Styles for Reset
+//To make styling reset to default
 *::before,
 *::after {
   margin: 0;
@@ -146,5 +148,10 @@ img {
 }
 
 * {
-    box-sizing: border-box;
+  font-size: 18px;
+}
+
+body {
+  position: relative;
+  display: block;
 }

@@ -2,5 +2,10 @@
 @use "partials/footer";
 @use "partials/global";
 @use "partials/nav";
+@use "partials/ui";
 @use "partials/responsive";
 @import "partials/var";
+
+.w-col-42456 {
+    padding: 0 0 0 40px;
+}

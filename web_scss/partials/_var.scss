@@ -1,3 +1,4 @@
+//Styles for Global Variables
 //Font
 @font-face {
     font-family: 'Urbanist';
@@ -39,31 +40,39 @@ $black: #000;
     align-items: center;
 }
 
-@mixin urbanist-font($weight, $size, $color) {
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex-row{
+    display: flex;
+}
+
+@mixin font-family() {
     font-family: "Urbanist", serif;
     font-optical-sizing: auto;
-    font-weight: $weight;
-    font-style: normal;
-    font-size: $size;
-    color: $color;
     letter-spacing: 0;
     text-transform: none;
     text-decoration: none;
 }
 
-@mixin button-style($bg-color, $text-color) {
+@mixin font-setting($weight, $style, $size, $color) {
+    font-weight: $weight;
+    font-style: $style;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin button-setting($bg-color) {
     position: relative;
-    padding: 16px 20px;
-    @include max-width;
+    display: inline-block;
+    max-width: max-content;
+    width: 100%;
     background-color: $bg-color;
+    max-height: max-content;
     height: 100%;
     border-radius: 8px;
     transition: all 300ms ease-in-out;
-
-    .w-button-inner {
-        @include urbanist-font(700, 1rem, $text-color);
-        transition: color 200ms ease-in-out;
-    }
 }
 
 @mixin max-width {
