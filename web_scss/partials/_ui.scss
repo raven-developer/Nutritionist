@@ -1,32 +1,53 @@
 //This stylesheet is for UI Styles
 @import "var";
 
+body {
+    background-color: $green97;
+}
+
+.w-hero-section {
+    height: 76vh;
+}
+
 .w-section {
     @include flex-center;
+    justify-content: center;
     position: relative;
     padding: 75px 0;
 }
+
 .w-col-section {
     @include flex-column;
 }
+
 .w-row-section {
     @include flex-row;
 }
+
 .w-col-content {
     @include flex-column;
 }
+
 .w-row-content {
     @include flex-row;
 }
+
+.w-inner-row {
+    @include flex-column;
+    @include flex-center();
+}
+
 .w-container {
     max-width: 1596px;
     width: 100%;
     margin: 0 20px;
 }
+
 .w-inner-col {
     @include flex-column;
     width: 50%;
 }
+
 .w-default-padding {
     padding: 40px;
 }
@@ -34,9 +55,165 @@
 .gap-default {
     gap: 50px
 }
+
 .gap-large {
     gap: 70px
 }
+
+.gap-medium {
+    gap: 30px
+}
+
 .gap-small {
     gap: 20px
+}
+
+.gap-xsmall {
+    gap: 10px
+}
+
+.gap-xxsmall {
+    gap: 4px
+}
+
+.w-bottom-border {
+    @include bottom-border;
+    max-width: max-content;
+    padding: 10px 0;
+}
+
+.w-client-circle {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 8px;
+    border: 1px solid $green70;
+    width: max-content;
+    border-radius: 50px / 50px;
+}
+
+.w-client {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    &:not(:first-child) {
+        margin-left: -18px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.client-1 {
+    background-color: $dgreen90;
+    z-index: 1;
+}
+
+.client-2 {
+    background-color: $dgreen80;
+    z-index: 2;
+}
+
+.client-3 {
+    background-color: $dgreen60;
+    z-index: 3;
+}
+
+.w-client-count {
+    height: max-content;
+
+    .w-paragraph {
+        @include font-setting(600, normal, 20px, $dgreen20)
+    }
+}
+
+.w-client-ratings {
+    @include flex-center;
+}
+
+.w-hero-image {
+    position: absolute;
+    left: -30px;
+    top: 0;
+    width: 70%;
+    max-width: none;
+}
+
+.w-feature-card {
+    @include flex-column;
+    @include card-background;
+    @include round-border-default;
+    padding: 40px 50px;
+    max-width: 996px;
+
+    .w-feature-icon {
+        width: 68px;
+        height: 68px;
+        flex-shrink: 0;
+        background-color: $gray30;
+        @include round-border-small;
+    }
+
+    .w-feature-title {
+        @include flex-center();
+    }
+}
+
+.w-center-heading {
+    max-width: 996px;
+    width: 100%;
+
+    .w-paragraph {
+        text-align: center;
+    }
+}
+
+.w-center-col {
+    @include flex-center;
+}
+
+.w-blog-card {
+    padding: 40px;
+    @include flex-column;
+    @include card-background;
+    @include round-border-default;
+    max-width: 996px;
+
+    .w-blog-details {
+        @include flex-column;
+    }
+
+    .w-feature-image {
+        width: 100%;
+        aspect-ratio: 16/9;
+        background-color: $gray30;
+        @include round-border-small;
+    }
+
+    .w-blog-category {
+        @include font-setting(500, normal, 1rem, $dgreen40)
+    }
+
+    .w-blog-head {
+        @include flex-column;
+    }
+
+    .w-blog-excerpt {
+        @include limit-line (3);
+    }
+    
+    .w-blog-title {
+        @include limit-line (2);
+    }
+}
+
+.w-feature-grid, .w-blog-grid {
+    @include max-width;
+    @include grid-2-col(2);
 }

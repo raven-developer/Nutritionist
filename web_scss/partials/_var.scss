@@ -2,10 +2,167 @@
 //Font
 @font-face {
     font-family: 'Urbanist';
-    src: url('../../web_assets/fonts/Urbanist-Regular.woff2') format('woff2'),
-        url('../../web_assets/fonts/Urbanist-Regular.woff') format('woff');
+    src: url('../../web_assets/fonts/Urbanist-BoldItalic.woff2') format('woff2'),
+        url('../../web_assets/fonts/Urbanist-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url('../../web_assets/fonts/Urbanist-Black.woff2') format('woff2'),
+        url('../../web_assets/fonts/Urbanist-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url('../../web_assets/fonts/Urbanist-BlackItalic.woff2') format('woff2'),
+        url('../../web_assets/fonts/Urbanist-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url('../../web_assets/fonts/Urbanist-ExtraLight.woff2') format('woff2'),
+        url('../../web_assets/fonts/Urbanist-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url('../../web_assets/fonts/Urbanist-ExtraBold.woff2') format('woff2'),
+        url('../../web_assets/fonts/Urbanist-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url('../../web_assets/fonts/Urbanist-Bold.woff2') format('woff2'),
+        url('../../web_assets/fonts/Urbanist-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url('../../web_assets/fonts/Urbanist-ExtraBoldItalic.woff2') format('woff2'),
+        url('../../web_assets/fonts/Urbanist-ExtraBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url('../../web_assets/fonts/Urbanist-Thin.woff2') format('woff2'),
+        url('../../web_assets/fonts/Urbanist-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url('../../web_assets/fonts/Urbanist-Light.woff2') format('woff2'),
+        url('../../web_assets/fonts/Urbanist-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url('../../web_assets/fonts/Urbanist-ExtraLightItalic.woff2') format('woff2'),
+        url('../../web_assets/fonts/Urbanist-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url('../../web_assets/fonts/Urbanist-LightItalic.woff2') format('woff2'),
+        url('../../web_assets/fonts/Urbanist-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url('../../web_assets/fonts/Urbanist-Regular.woff2') format('woff2'),
+        url('../../web_assets/fonts/Urbanist-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url('../../web_assets/fonts/Urbanist-SemiBoldItalic.woff2') format('woff2'),
+        url('../../web_assets/fonts/Urbanist-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url('../../web_assets/fonts/Urbanist-Medium.woff2') format('woff2'),
+        url('../../web_assets/fonts/Urbanist-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url('../../web_assets/fonts/Urbanist-MediumItalic.woff2') format('woff2'),
+        url('../../web_assets/fonts/Urbanist-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url('../../web_assets/fonts/Urbanist-ThinItalic.woff2') format('woff2'),
+        url('../../web_assets/fonts/Urbanist-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url('../../web_assets/fonts/Urbanist-SemiBold.woff2') format('woff2'),
+        url('../../web_assets/fonts/Urbanist-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url('../../web_assets/fonts/Urbanist-Italic.woff2') format('woff2'),
+        url('../../web_assets/fonts/Urbanist-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+
 
 //Color
 //Dark Green
@@ -36,15 +193,15 @@ $black: #000;
 //@Mixins
 @mixin flex-center {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
-@mixin flex-column{
+@mixin flex-column {
     display: flex;
     flex-direction: column;
 }
-@mixin flex-row{
+
+@mixin flex-row {
     display: flex;
 }
 
@@ -71,11 +228,42 @@ $black: #000;
     background-color: $bg-color;
     max-height: max-content;
     height: 100%;
-    border-radius: 8px;
-    transition: all 300ms ease-in-out;
+    @include round-border-small();
+    transition: all 350ms ease-in-out;
 }
 
 @mixin max-width {
     max-width: 100%;
     width: 100%;
+}
+
+@mixin bottom-border {
+    border-bottom: 3px solid $green70;
+}
+
+@mixin round-border-small {
+    border-radius: 8px;
+}
+
+@mixin round-border-default {
+    border-radius: 12px;
+}
+
+@mixin grid-2-col($column) {
+    display: grid;
+    grid-template-columns: repeat($column, 1fr);
+}
+
+@mixin card-background {
+    background-color: $green95;
+    border: 1px solid $green85;
+}
+
+@mixin limit-line ($limit) {
+    display: -webkit-box;
+    -webkit-line-clamp: $limit;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
 }
