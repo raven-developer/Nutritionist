@@ -2,10 +2,13 @@
 @import "var";
 
 @media screen and (max-width: 1024px) {
-    .w-feature-grid, .w-blog-grid {
+    .w-testimonial-section .w-card-grid, .w-card-grid {
         @include grid-2-col(1);
     }
-    .w-feature-card, .w-blog-card {
-        padding: 24px;
+    .w-testimonial-top, .w-feature-card, .w-blog-card {
+        padding: 24px !important;
+    }
+    .w-testimonial-bottom {
+        padding: 18px 24px !important;
     }
 }

@@ -10,6 +10,7 @@ body {
 }
 
 .w-section {
+    @include flex-row;
     @include flex-center;
     justify-content: center;
     position: relative;
@@ -134,6 +135,7 @@ body {
 }
 
 .w-client-ratings {
+    @include flex-row;
     @include flex-center;
 }
 
@@ -147,10 +149,12 @@ body {
 
 .w-feature-card {
     @include flex-column;
-    @include card-background;
+    @include card-background($green95);
     @include round-border-default;
     padding: 40px 50px;
     max-width: 996px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: none;
 
     .w-feature-icon {
         width: 68px;
@@ -161,7 +165,14 @@ body {
     }
 
     .w-feature-title {
+        @include flex-row;
         @include flex-center();
+    }
+
+    &:hover {
+        border-color: $dgreen40;
+        box-shadow: 20px 20px 60px rgba(26, 49, 41, 0.07),
+            -20px -20px 60px #ffffff;
     }
 }
 
@@ -175,18 +186,24 @@ body {
 }
 
 .w-center-col {
+    display: flex;
     @include flex-center;
 }
 
 .w-blog-card {
     padding: 40px;
     @include flex-column;
-    @include card-background;
+    @include card-background($green95);
     @include round-border-default;
+    justify-content: space-between;
     max-width: 996px;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+    box-shadow: none;
 
     .w-blog-details {
         @include flex-column;
+        flex-grow: 1;
     }
 
     .w-feature-image {
@@ -194,6 +211,7 @@ body {
         aspect-ratio: 16/9;
         background-color: $gray30;
         @include round-border-small;
+        flex-grow: 0;
     }
 
     .w-blog-category {
@@ -204,16 +222,115 @@ body {
         @include flex-column;
     }
 
-    .w-blog-excerpt {
-        @include limit-line (3);
-    }
-    
-    .w-blog-title {
-        @include limit-line (2);
+    &:hover {
+        border-color: $dgreen40;
+        box-shadow: 20px 20px 60px rgba(26, 49, 41, 0.07),
+            -20px -20px 60px #ffffff;
     }
 }
 
-.w-feature-grid, .w-blog-grid {
+.w-card-grid {
     @include max-width;
     @include grid-2-col(2);
+    align-items: stretch;
+}
+
+.w-plan-section .w-card-grid,
+.w-testimonial-section .w-card-grid {
+    @include grid-2-col(3);
+}
+
+.w-testimonial-card {
+    @include flex-column;
+    align-items: stretch;
+    min-height: 100%;
+
+    .w-testimonial-top {
+        @include flex-column;
+        padding: 40px;
+        @include card-background($green97);
+        border-radius: 16px 16px 0 0;
+        flex-grow: 1;
+
+        .w-testimonial-icon {
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+        }
+    }
+
+    .w-testimonial-bottom {
+        @include flex-row;
+        @include flex-center;
+        padding: 30px 40px;
+        @include card-background($green95);
+        border-top: unset;
+        border-radius: 0 0 16px 16px;
+
+        .w-testimonial-name {
+            font-weight: 600;
+        }
+
+        .w-testimonial-profile {
+            width: 60px;
+            height: 60px;
+            flex-shrink: 0;
+            background-color: $gray30;
+            @include round-border-small;
+        }
+    }
+}
+
+.w-pricing-toggle {
+    @include flex-row;
+    padding: 10px;
+    @include card-background(transparent);
+    @include round-border-small;
+}
+
+.enabled {
+    background-color: $dgreen20;
+
+    .w-button-inner {
+        color: white;
+    }
+}
+
+
+.w-plan-card {
+    @include flex-column;
+    @include card-background($green95);
+    padding: 50px;
+    @include round-border-default;
+    transition: all 0.3s ease-in-out;
+    box-shadow: none;
+    justify-content: space-between;
+
+    .w-plan-heading {
+        @include flex-column;
+
+        .w-paragraph {
+            color: $gray30;
+        }
+    }
+
+    .w-plan-cta {
+        @include flex-column;
+
+        .w-plan {
+            @include flex-row;
+            @include flex-center;
+        }
+
+        .w-button {
+            max-width: calc(100% - 50px);
+            text-align: center;
+        }
+    }
+
+    &:hover {
+        border-color: $dgreen40;
+        box-shadow: 20px 20px 60px rgba(26, 49, 41, 0.07),
+            -20px -20px 60px #ffffff;
+    }
 }

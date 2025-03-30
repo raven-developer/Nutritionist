@@ -9,7 +9,7 @@
     <script src="../web_assets/js/script.js"></script>
 </head>
 
-<body>
+<body data-page="home">
     <!-- Navbar -->
     <div id="navbar"></div>
 
@@ -69,7 +69,7 @@
                 <p class="w-paragraph">Welcome to the Feature Section of Nutritionist, your ultimate destination for all
                     things nutrition and wellness.</p>
             </div>
-            <div class="w-inner-row gap-medium w-feature-grid">
+            <div class="w-inner-row gap-medium w-card-grid">
                 <div class="w-feature-card gap-medium w-feature-card-01">
                     <div class="w-feature-title gap-small">
                         <div class="w-feature-icon"></div>
@@ -145,12 +145,12 @@
                 </p>
             </div>
 
-            <div class="w-inner-row gap-medium w-blog-grid">
+            <div class="w-inner-row gap-medium w-card-grid">
                 <div class="w-blog-card gap-default w-blog-card-01">
                     <div class="w-feature-image"></div>
                     <div class="w-blog-details gap-small">
                         <div class="w-blog-head gap-xxsmall">
-                            <p class="w-paragraph w-blog-category">Weight Loss</h5>
+                            <p class="w-paragraph w-blog-category">Weight Loss</p>
                             <h5 class="w-heading w-blog-title">The Benefits of Hydration for Weight Loss</h5>
                         </div>
 
@@ -162,7 +162,7 @@
                     <div class="w-feature-image"></div>
                     <div class="w-blog-details gap-small">
                         <div class="w-blog-head gap-xxsmall">
-                            <p class="w-paragraph w-blog-category">Mindful Eating</h5>
+                            <p class="w-paragraph w-blog-category">Mindful Eating</p>
                             <h5 class="w-heading w-blog-title">Cultivating a Healthy Relationship with Food</h5>
                         </div>
 
@@ -174,7 +174,7 @@
                     <div class="w-feature-image"></div>
                     <div class="w-blog-details gap-small">
                         <div class="w-blog-head gap-xxsmall">
-                            <p class="w-paragraph w-blog-category">Understanding Macronutrients</h5>
+                            <p class="w-paragraph w-blog-category">Understanding Macronutrients</p>
                             <h5 class="w-heading w-blog-title">Carbohydrates, Proteins, and Fats</h5>
                         </div>
 
@@ -186,7 +186,7 @@
                     <div class="w-feature-image"></div>
                     <div class="w-blog-details gap-small">
                         <div class="w-blog-head gap-xxsmall">
-                            <p class="w-paragraph w-blog-category">Healthy Snacks on the Go</h5>
+                            <p class="w-paragraph w-blog-category">Healthy Snacks on the Go</p>
                             <h5 class="w-heading w-blog-title">Quick and Nutritious Options</h5>
                         </div>
 
@@ -198,19 +198,180 @@
         </div>
     </section>
 
-     <!-- Testimonials -->
-     <section class="w-section w-testimonial-section" id="w-testimonial-section">
+    <!-- Testimonials -->
+    <section class="w-section w-testimonial-section" id="w-testimonial-section">
         <div class="w-container w-col-section w-center-col gap-large">
             <div class="w-inner-row gap-xsmall w-center-heading">
                 <h2 class="w-heading">Our Testimonials</h2>
-                <p class="w-paragraph">Our satisfied clients share their success stories and experiences on their journey to better health and well-being.
+                <p class="w-paragraph">Our satisfied clients share their success stories and experiences on their
+                    journey to better health and well-being.
                 </p>
             </div>
+            <div class="w-inner-row gap-medium w-card-grid">
+                <div class="w-testimonial-card w-testimonial-card-01">
+                    <div class="w-testimonial-top gap-default">
+                        <div class="w-testimonial-icon">
+                            <img src="../web_assets/images/quotation-mark.svg" alt="Quotation Mark">
+                        </div>
+                        <p class="w-paragraph w-testimonial-content">I can't thank Nutritionist enough for their
+                            personalized nutrition coaching. It has
+                            completely transformed my approach to food and helped me shed those extra pounds. Highly
+                            recommended!</p>
+                    </div>
+                    <div class="w-testimonial-bottom gap-small">
+                        <div class="w-testimonial-profile"></div>
+                        <p class="w-paragraph w-testimonial-name">Jennifer Anderson</p>
+                    </div>
+                </div>
+
+                <div class="w-testimonial-card w-testimonial-card-02">
+                    <div class="w-testimonial-top gap-default">
+                        <div class="w-testimonial-icon">
+                            <img src="../web_assets/images/quotation-mark.svg" alt="Quotation Mark">
+                        </div>
+                        <p class="w-paragraph w-testimonial-content">Nutritionist has been a game-changer for me. The
+                            expert guidance and support I received from their team made my weight loss journey so much
+                            easier. Thank you!</p>
+                    </div>
+                    <div class="w-testimonial-bottom gap-small">
+                        <div class="w-testimonial-profile"></div>
+                        <p class="w-paragraph w-testimonial-name">Robert Johnson</p>
+                    </div>
+                </div>
+
+                <div class="w-testimonial-card w-testimonial-card-03">
+                    <div class="w-testimonial-top gap-default">
+                        <div class="w-testimonial-icon">
+                            <img src="../web_assets/images/quotation-mark.svg" alt="Quotation Mark">
+                        </div>
+                        <p class="w-paragraph w-testimonial-content">I had struggled with my weight for years until I
+                            found Nutritionist. Their personalized approach and tailored nutrition plan made all the
+                            difference. I've never felt better!</p>
+                    </div>
+                    <div class="w-testimonial-bottom gap-small">
+                        <div class="w-testimonial-profile"></div>
+                        <p class="w-paragraph w-testimonial-name">Emily Davis</p>
+                    </div>
+                </div>
+            </div>
         </div>
-     </section>
+    </section>
+
+
+    <section class="w-section w-plan-section" id="w-plan-section">
+        <div class="w-container w-col-section w-center-col gap-large">
+            <div class="w-inner-row gap-xsmall w-center-heading">
+                <h2 class="w-heading">Our Pricing</h2>
+                <p class="w-paragraph">We outline our flexible and affordable options to support you on your journey to
+                    optimal health and nutrition. We believe that everyone deserves access to personalized nutrition
+                    guidance and resources.</p>
+            </div>
+
+            <div class="w-inner-row gap-default">
+                <div class="w-inner-row gap-small">
+                    <div class="w-pricing-toggle">
+                        <div id="toggle-monthly" class="w-toggle-button w-button enabled">
+                            <span class="w-button-inner">Monthly</span>
+                        </div>
+                        <div id="toggle-yearly" class="w-toggle-button w-button">
+                            <span class="w-button-inner">Yearly</span>
+                        </div>
+                    </div>
+                    <p class="w-paragraph">Save 50% on Yearly</p>
+                </div>
+
+                <div class="w-inner-row gap-medium w-card-grid w-monthly-plans">
+                    <div class="w-plan-card gap-default w-plan-card-01">
+                        <div class="w-plan-heading gap-xsmall">
+                            <h4 class="w-heading w-plan-title">Basic Plan</h4>
+                            <p class="w-paragraph">Up to 50% off on Yearly Plan</p>
+                        </div>
+                        <p class="w-paragraph w-plan-details">Get started on your health journey with our Basic Plan. It
+                            includes personalized nutrition coaching, access to our app, meal planning assistance, and
+                            email support.</p>
+
+                        <div class="w-plan-cta gap-medium">
+                            <div class="w-plan gap-xxsmall">
+                                <h2 class="w-heading w-plan-amount">$49</h2>
+                                <p class="w-paragraph">/month</p>
+                            </div>
+                            <a href="#" class="w-primary-button w-button"><span class="w-button-inner">Get Started
+                                    Now</span></a>
+                        </div>
+                    </div>
+
+                    <div class="w-plan-card gap-default w-plan-card-02">
+                        <div class="w-plan-heading gap-xsmall">
+                            <h4 class="w-heading w-plan-title">Premium Plan</h4>
+                            <p class="w-paragraph">Up to 50% off on Yearly Plan</p>
+                        </div>
+                        <p class="w-paragraph w-plan-details">Upgrade to our Premium Plan for enhanced features. In
+                            addition to the Basic Plan, you'll receive video consultations, priority support, and
+                            personalized recipe recommendations.</p>
+
+                        <div class="w-plan-cta gap-medium">
+                            <div class="w-plan gap-xxsmall">
+                                <h2 class="w-heading w-plan-amount">$79</h2>
+                                <p class="w-paragraph">/month</p>
+                            </div>
+                            <a href="#" class="w-primary-button w-button"><span class="w-button-inner">Get Started
+                                    Now</span></a>
+                        </div>
+                    </div>
+
+                    <div class="w-plan-card gap-default w-plan-card-03">
+                        <div class="w-plan-heading gap-xsmall">
+                            <h4 class="w-heading w-plan-title">Ultimate Plan</h4>
+                            <p class="w-paragraph">Up to 50% off on Yearly Plan</p>
+                        </div>
+                        <p class="w-paragraph w-plan-details">Experience the full benefits of personalized nutrition
+                            coaching with our Ultimate Plan. Enjoy all the features of the Premium Plan, along with 24/7
+                            chat support and exclusive workshops.</p>
+
+                        <div class="w-plan-cta gap-medium">
+                            <div class="w-plan gap-xxsmall">
+                                <h2 class="w-heading w-plan-amount">$99</h2>
+                                <p class="w-paragraph">/month</p>
+                            </div>
+                            <a href="#" class="w-primary-button w-button"><span class="w-button-inner">Get Started
+                                    Now</span></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+    </section>
 
     <!-- Footer -->
-    <div id="footer"></div>
+    <footer id="footer"></footer>
 </body>
 
 </html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        function setActiveMenuItem() {
+            let currentPage = window.location.pathname.split("/").filter(Boolean).pop();
+            let activeItem = document.querySelector(`.menu-item[data-page="${currentPage}"]`);
+
+            if (activeItem) {
+                activeItem.classList.add("active");
+            }
+        }
+
+        setActiveMenuItem();
+
+        const observer = new MutationObserver(() => {
+            setActiveMenuItem();
+            if (document.querySelector(".menu-item.active")) {
+                observer.disconnect();
+            }
+        });
+
+        observer.observe(document.body, { childList: true, subtree: true });
+    });
+
+</script>

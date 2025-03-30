@@ -192,7 +192,6 @@ $black: #000;
 
 //@Mixins
 @mixin flex-center {
-    display: flex;
     align-items: center;
 }
 
@@ -222,14 +221,14 @@ $black: #000;
 
 @mixin button-setting($bg-color) {
     position: relative;
-    display: inline-block;
     max-width: max-content;
     width: 100%;
-    background-color: $bg-color;
     max-height: max-content;
     height: 100%;
+    background-color: $bg-color;
     @include round-border-small();
     transition: all 350ms ease-in-out;
+    cursor: pointer;
 }
 
 @mixin max-width {
@@ -254,8 +253,8 @@ $black: #000;
     grid-template-columns: repeat($column, 1fr);
 }
 
-@mixin card-background {
-    background-color: $green95;
+@mixin card-background ($bg-color) {
+    background-color: $bg-color;
     border: 1px solid $green85;
 }
 

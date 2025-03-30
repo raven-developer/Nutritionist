@@ -72,6 +72,16 @@ h6.w-heading {
     line-height: 150%;
 }
 
+.w-secondary-button {
+    @include button-setting($green95);
+    border: 1px solid $green85;
+    padding: 16px 20px 14px 20px;
+
+    &:hover {
+        border-color: $dgreen15;
+    }
+}
+
 .w-primary-button:hover {
     @include button-setting($dgreen15);
 
@@ -80,6 +90,13 @@ h6.w-heading {
     }
 }
 
-.w-secondary-button:hover {
-    border-color: $dgreen15
+.w-toggle-button {
+    @include button-setting(transparent);
+
+    .w-button-inner {
+        @include flex-row;
+        justify-content: center;
+        width: 72px;
+    }
 }
+
