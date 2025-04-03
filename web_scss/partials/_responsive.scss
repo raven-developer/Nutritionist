@@ -1,5 +1,5 @@
 //Styles for responsive only
-@import "var";
+@use '_var.scss' as *;
 
 @media screen and (max-width: 1024px) {
     .w-plan-section .w-card-grid, .w-testimonial-section .w-card-grid, .w-card-grid {
@@ -16,12 +16,16 @@
         display: none !important;
     }
     
-    .w-feature-icon {
+    .w-feature-card .w-feature-icon {
         padding: 12px;
         
         img {
             height: 24px;
             aspect-ratio: 1 / 1;
         }
+    }
+
+    .w-paragraph {
+        font-size: 16px;
     }
 }

@@ -1,5 +1,5 @@
 //This stylesheet is for UI Styles
-@import "var";
+@use '_var.scss' as *;
 
 body {
     background-color: $green97;

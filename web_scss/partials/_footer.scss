@@ -1,5 +1,5 @@
 // Styles for Footer Only
-@import "var";
+@use '_var.scss' as *;
 
 footer {
     background-color: $dgreen15;

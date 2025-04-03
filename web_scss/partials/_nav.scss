@@ -1,5 +1,5 @@
 //Styles for Navigation Bar Only
-@import "var";
+@use '_var.scss' as *;
 
 #navbar {
     background-color: $dgreen15;

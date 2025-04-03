@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
             let scrollToTopButton = $('#scrollToTop');
 
             if (scrollToTopButton.length) {
-                console.log("Scroll to Top button found! ✅");
                 clearInterval(checkFooter); 
 
                 $(document).on('click', '#scrollToTop', function (e) {
