@@ -17,7 +17,6 @@ footer {
 .w-inner-footer {
     @include flex-row;
     @include flex-center;
-    width: 100%;
     justify-content: space-between;
     
     .w-paragraph {
@@ -36,6 +35,10 @@ footer {
     }
 }
 
+.w-copyright .w-paragraph{
+    color: $dgreen90;
+}
+
 .footer-menu {
     display: flex;
     flex-grow: 1;
@@ -51,8 +54,11 @@ footer {
     display: flex;
     width: 100%;
     justify-content: flex-end;
-    margin-left: auto;
+    margin-left: auto;    
     
+    .w-back-to-top-button {
+        cursor: pointer;
+    }
     .back-to-top {
         @include flex-row;
         @include flex-center;
@@ -62,6 +68,7 @@ footer {
             background-color: $dgreen20;
             border-radius: 50%;
             image-rendering: -webkit-optimize-contrast;
+            border: 1px solid $dgreen25;
         }
     }
 }
@@ -70,7 +77,7 @@ footer {
     background-color: $dgreen20;
     border: 1px solid $dgreen25;
     padding: 16px 30px 16px 20px;
-    @include round-border-small;
+    border-radius: $round-border-small;
     @include flex-row;
     justify-content: space-between;
 
@@ -99,6 +106,21 @@ footer {
     transition: border-color 0.3s ease-in-out;
 
     &:hover {
-        border-color: $green95;
+        border-color: $green70;
+    }
+}
+
+.w-custom-button {
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        .w-paragraph {
+            color: $green70;
+            transition: all 0.3s ease-in-out;
+        }
+        .back-to-top-arrow {
+            border-color: $green70;
+            transition: all 0.3s ease-in-out;
+        }
     }
 }

@@ -1,7 +1,55 @@
 //Styles for Navigation Bar Only
 @import "var";
 
-nav {
-    height: 167px;
+#navbar {
     background-color: $dgreen15;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+}
+
+.w-inner-nav {
+    @include flex-row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    .w-primary-button:hover {
+        @include button-setting($white);
+    
+        .w-button-inner {
+            color: $dgreen15;
+        }
+    }
+}
+.w-inner-nav .w-paragraph {
+    color: $white;
+}
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    
+    .menu-link {
+        @include flex-row;
+    }
+}
+
+.menu-link li {
+    @include flex-row;
+    align-items: center ;
+}
+
+.nav-menu li:last-child {
+    margin-left: 10px;
+}
+
+.nav-logo {
+    width: auto;
+    height: 45px;
+    margin-right: auto;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
 }

@@ -7,11 +7,28 @@
     <title>Home</title>
     <link rel="stylesheet" href="../web_assets/css/main-min.css">
     <script src="../web_assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body data-page="home">
+    <!-- CTA -->
+    <div class="w-nav-cta">
+        <div class="w-container">
+            <div class="w-inner-row gap-medium w-center-row w-cta-container">
+                <div class="w-cta-content gap-xsmall">
+                    <div>
+                        <img src="../web_assets/images/Vector.svg" alt="">
+                    </div>
+                    <p class="w-paragraph">Join Our Personalized Nutrition Demo For Free</p>
+                </div>
+                <div class="w-cta-arrow">
+                    <img src="../web_assets/images/arrow-small-up.svg" alt="Small Arrow">
+                </div>                
+            </div>
+        </div>
+    </div>
     <!-- Navbar -->
-    <div id="navbar"></div>
+    <nav id="navbar"></nav>
 
     <!-- Hero -->
     <section class="w-section w-hero-section">
@@ -42,13 +59,13 @@
                     <div class="w-client-ratings gap-xsmall">
                         <div class="w-client-circle">
                             <div class="w-client client-1">
-                                <img>
+                                <img src="../web_assets/images/client-1.png" alt="Client 1">
                             </div>
                             <div class="w-client client-2">
-                                <img>
+                                <img src="../web_assets/images/client-2.png" alt="Client 2">
                             </div>
                             <div class="w-client client-3">
-                                <img>
+                                <img src="../web_assets/images/client-3.png" alt="Client 3">
                             </div>
                         </div>
                         <div class="w-client-count">
@@ -64,15 +81,17 @@
     <!-- Features -->
     <section class="w-section w-featured-section" id="w-featured-section">
         <div class="w-container w-col-section w-center-col gap-large">
-            <div class="w-inner-row gap-xsmall w-center-heading">
+            <div class="w-inner-col-center gap-xsmall w-center-heading">
                 <h2 class="w-heading">Features</h2>
                 <p class="w-paragraph">Welcome to the Feature Section of Nutritionist, your ultimate destination for all
                     things nutrition and wellness.</p>
             </div>
-            <div class="w-inner-row gap-medium w-card-grid">
+            <div class="w-inner-col-center gap-medium w-card-grid">
                 <div class="w-feature-card gap-medium w-feature-card-01">
                     <div class="w-feature-title gap-small">
-                        <div class="w-feature-icon"></div>
+                        <div class="w-feature-icon">
+                            <img src="../web_assets/images/icon-1.png" alt="">
+                        </div>
                         <h5 class="w-heading">Personalized Nutrition Plans</h5>
                     </div>
                     <p class="w-paragraph">Receive a tailored nutrition plan designed specifically for your body and
@@ -83,7 +102,9 @@
 
                 <div class="w-feature-card gap-medium w-feature-card-02">
                     <div class="w-feature-title gap-small">
-                        <div class="w-feature-icon"></div>
+                        <div class="w-feature-icon">
+                            <img src="../web_assets/images/icon-2.png" alt="">
+                        </div>
                         <h5 class="w-heading">Guidance from Certified Nutritionists</h5>
                     </div>
                     <p class="w-paragraph">Our team of experienced and certified nutritionists will provide professional
@@ -93,7 +114,9 @@
 
                 <div class="w-feature-card gap-medium w-feature-card-03">
                     <div class="w-feature-title gap-small">
-                        <div class="w-feature-icon"></div>
+                        <div class="w-feature-icon">
+                            <img src="../web_assets/images/icon-3.png" alt="">
+                        </div>
                         <h5 class="w-heading">Food Tracking and Analysis</h5>
                     </div>
                     <p class="w-paragraph">Effortlessly track your food intake using our user-friendly app. Our
@@ -103,7 +126,9 @@
 
                 <div class="w-feature-card gap-medium w-feature-card-04">
                     <div class="w-feature-title gap-small">
-                        <div class="w-feature-icon"></div>
+                        <div class="w-feature-icon">
+                            <img src="../web_assets/images/icon-4.png" alt="">
+                        </div>
                         <h5 class="w-heading">Meal Planning and Recipes</h5>
                     </div>
                     <p class="w-paragraph">Access a vast collection of delicious and healthy recipes tailored to your
@@ -113,7 +138,9 @@
 
                 <div class="w-feature-card gap-medium w-feature-card-05">
                     <div class="w-feature-title gap-small">
-                        <div class="w-feature-icon"></div>
+                        <div class="w-feature-icon">
+                            <img src="../web_assets/images/icon-5.png" alt="">
+                        </div>
                         <h5 class="w-heading">Lifestyle and Behavior Coaching</h5>
                     </div>
                     <p class="w-paragraph">Achieving sustainable results requires more than just a diet plan. Our
@@ -123,7 +150,9 @@
 
                 <div class="w-feature-card gap-medium w-feature-card-06">
                     <div class="w-feature-title gap-small">
-                        <div class="w-feature-icon"></div>
+                        <div class="w-feature-icon">
+                            <img src="../web_assets/images/icon-6.png" alt="">
+                        </div>
                         <h5 class="w-heading">Nutritional Education and Workshops</h5>
                     </div>
                     <p class="w-paragraph">Expand your knowledge of nutrition through informative articles and
@@ -138,16 +167,18 @@
     <!-- Blog -->
     <section class="w-section w-blog-section" id="w-blog-section">
         <div class="w-container w-col-section w-center-col gap-large">
-            <div class="w-inner-row gap-xsmall w-center-heading">
+            <div class="w-inner-col-center gap-xsmall w-center-heading">
                 <h2 class="w-heading">Our Blogs</h2>
                 <p class="w-paragraph">Our blog is a treasure trove of informative and engaging articles written by our
                     team of nutritionists, dietitians, and wellness experts. Here's what you can expect from our blog.
                 </p>
             </div>
 
-            <div class="w-inner-row gap-medium w-card-grid">
+            <div class="w-inner-col-center gap-medium w-card-grid">
                 <div class="w-blog-card gap-default w-blog-card-01">
-                    <div class="w-feature-image"></div>
+                    <div class="w-feature-image">
+                        <img src="../web_assets/images/Image.png" alt="The Benefits of Hydration for Weight Loss">
+                    </div>
                     <div class="w-blog-details gap-small">
                         <div class="w-blog-head gap-xxsmall">
                             <p class="w-paragraph w-blog-category">Weight Loss</p>
@@ -159,7 +190,9 @@
                     </div>
                 </div>
                 <div class="w-blog-card gap-default w-blog-card-02">
-                    <div class="w-feature-image"></div>
+                    <div class="w-feature-image">
+                        <img src="../web_assets/images/Image1.png" alt="Cultivating a Healthy Relationship with Food">
+                    </div>
                     <div class="w-blog-details gap-small">
                         <div class="w-blog-head gap-xxsmall">
                             <p class="w-paragraph w-blog-category">Mindful Eating</p>
@@ -171,7 +204,9 @@
                     </div>
                 </div>
                 <div class="w-blog-card gap-default w-blog-card-03">
-                    <div class="w-feature-image"></div>
+                    <div class="w-feature-image">
+                        <img src="../web_assets/images/Image3.png" alt="Carbohydrates, Proteins, and Fats">
+                    </div>
                     <div class="w-blog-details gap-small">
                         <div class="w-blog-head gap-xxsmall">
                             <p class="w-paragraph w-blog-category">Understanding Macronutrients</p>
@@ -183,7 +218,9 @@
                     </div>
                 </div>
                 <div class="w-blog-card gap-default w-blog-card-04">
-                    <div class="w-feature-image"></div>
+                    <div class="w-feature-image">
+                        <img src="../web_assets/images/Image4.png" alt="Quick and Nutritious Options">
+                    </div>
                     <div class="w-blog-details gap-small">
                         <div class="w-blog-head gap-xxsmall">
                             <p class="w-paragraph w-blog-category">Healthy Snacks on the Go</p>
@@ -201,13 +238,13 @@
     <!-- Testimonials -->
     <section class="w-section w-testimonial-section" id="w-testimonial-section">
         <div class="w-container w-col-section w-center-col gap-large">
-            <div class="w-inner-row gap-xsmall w-center-heading">
+            <div class="w-inner-col-center gap-xsmall w-center-heading">
                 <h2 class="w-heading">Our Testimonials</h2>
                 <p class="w-paragraph">Our satisfied clients share their success stories and experiences on their
                     journey to better health and well-being.
                 </p>
             </div>
-            <div class="w-inner-row gap-medium w-card-grid">
+            <div class="w-inner-col-center gap-medium w-card-grid">
                 <div class="w-testimonial-card w-testimonial-card-01">
                     <div class="w-testimonial-top gap-default">
                         <div class="w-testimonial-icon">
@@ -219,7 +256,9 @@
                             recommended!</p>
                     </div>
                     <div class="w-testimonial-bottom gap-small">
-                        <div class="w-testimonial-profile"></div>
+                        <div class="w-testimonial-profile">
+                            <img src="../web_assets/images/testimonial 3.png" alt="">
+                        </div>
                         <p class="w-paragraph w-testimonial-name">Jennifer Anderson</p>
                     </div>
                 </div>
@@ -234,7 +273,9 @@
                             easier. Thank you!</p>
                     </div>
                     <div class="w-testimonial-bottom gap-small">
-                        <div class="w-testimonial-profile"></div>
+                        <div class="w-testimonial-profile">
+                            <img src="../web_assets/images/testimonial 1.png" alt="">
+                        </div>
                         <p class="w-paragraph w-testimonial-name">Robert Johnson</p>
                     </div>
                 </div>
@@ -249,7 +290,9 @@
                             difference. I've never felt better!</p>
                     </div>
                     <div class="w-testimonial-bottom gap-small">
-                        <div class="w-testimonial-profile"></div>
+                        <div class="w-testimonial-profile">
+                            <img src="../web_assets/images/testimonial 2.png" alt="">
+                        </div>
                         <p class="w-paragraph w-testimonial-name">Emily Davis</p>
                     </div>
                 </div>
@@ -260,15 +303,15 @@
 
     <section class="w-section w-plan-section" id="w-plan-section">
         <div class="w-container w-col-section w-center-col gap-large">
-            <div class="w-inner-row gap-xsmall w-center-heading">
+            <div class="w-inner-col-center gap-xsmall w-center-heading">
                 <h2 class="w-heading">Our Pricing</h2>
                 <p class="w-paragraph">We outline our flexible and affordable options to support you on your journey to
                     optimal health and nutrition. We believe that everyone deserves access to personalized nutrition
                     guidance and resources.</p>
             </div>
 
-            <div class="w-inner-row gap-default">
-                <div class="w-inner-row gap-small">
+            <div class="w-inner-col-center gap-default">
+                <div class="w-inner-col-center gap-small">
                     <div class="w-pricing-toggle">
                         <div id="toggle-monthly" class="w-toggle-button w-button enabled">
                             <span class="w-button-inner">Monthly</span>
@@ -280,7 +323,7 @@
                     <p class="w-paragraph">Save 50% on Yearly</p>
                 </div>
 
-                <div class="w-inner-row gap-medium w-card-grid w-monthly-plans">
+                <div class="w-inner-col-center gap-medium w-card-grid w-monthly-plans">
                     <div class="w-plan-card gap-default w-plan-card-01">
                         <div class="w-plan-heading gap-xsmall">
                             <h4 class="w-heading w-plan-title">Basic Plan</h4>
@@ -355,7 +398,7 @@
     document.addEventListener("DOMContentLoaded", function () {
         function setActiveMenuItem() {
             let currentPage = window.location.pathname.split("/").filter(Boolean).pop();
-            let activeItem = document.querySelector(`.menu-item[data-page="${currentPage}"]`);
+            let activeItem = document.querySelector(`nav .menu-item[data-page="${currentPage}"]`);
 
             if (activeItem) {
                 activeItem.classList.add("active");
@@ -366,7 +409,7 @@
 
         const observer = new MutationObserver(() => {
             setActiveMenuItem();
-            if (document.querySelector(".menu-item.active")) {
+            if (document.querySelector("nav .menu-item.active")) {
                 observer.disconnect();
             }
         });

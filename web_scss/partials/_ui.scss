@@ -33,7 +33,7 @@ body {
     @include flex-row;
 }
 
-.w-inner-row {
+.w-inner-col-center {
     @include flex-column;
     @include flex-center();
 }
@@ -47,6 +47,15 @@ body {
 .w-inner-col {
     @include flex-column;
     width: 50%;
+}
+
+.w-inner-row {
+    @include flex-row;
+    align-items: center;
+}
+
+.w-center-row {
+    justify-content: center;
 }
 
 .w-default-padding {
@@ -150,18 +159,27 @@ body {
 .w-feature-card {
     @include flex-column;
     @include card-background($green95);
-    @include round-border-default;
+    border-radius: $round-border-default;
     padding: 40px 50px;
     max-width: 996px;
     transition: all 0.3s ease-in-out;
     box-shadow: none;
 
     .w-feature-icon {
-        width: 68px;
-        height: 68px;
+        padding: 14px;
         flex-shrink: 0;
-        background-color: $gray30;
-        @include round-border-small;
+        max-height: 68px;
+        max-width: 68px;
+        background-color: $green70;
+        border-radius: $round-border-small;
+        @include flex-row;
+        align-items: center;
+        justify-content: center;
+        
+        img {
+            height: 40px;
+            aspect-ratio: 1 / 1;
+        }
     }
 
     .w-feature-title {
@@ -194,7 +212,7 @@ body {
     padding: 40px;
     @include flex-column;
     @include card-background($green95);
-    @include round-border-default;
+    border-radius: $round-border-default;
     justify-content: space-between;
     max-width: 996px;
     height: auto;
@@ -209,8 +227,7 @@ body {
     .w-feature-image {
         width: 100%;
         aspect-ratio: 16/9;
-        background-color: $gray30;
-        @include round-border-small;
+        border-radius: $round-border-small;
         flex-grow: 0;
     }
 
@@ -275,8 +292,7 @@ body {
             width: 60px;
             height: 60px;
             flex-shrink: 0;
-            background-color: $gray30;
-            @include round-border-small;
+            border-radius: $round-border-small;
         }
     }
 }
@@ -285,7 +301,7 @@ body {
     @include flex-row;
     padding: 10px;
     @include card-background(transparent);
-    @include round-border-small;
+    border-radius: $round-border-small;
 }
 
 .enabled {
@@ -301,7 +317,7 @@ body {
     @include flex-column;
     @include card-background($green95);
     padding: 50px;
-    @include round-border-default;
+    border-radius: $round-border-default;
     transition: all 0.3s ease-in-out;
     box-shadow: none;
     justify-content: space-between;
@@ -333,4 +349,37 @@ body {
         box-shadow: 20px 20px 60px rgba(26, 49, 41, 0.07),
             -20px -20px 60px #ffffff;
     }
+}
+
+.w-nav-cta {
+    @include flex-row;
+    justify-content: center;
+    background-color: $dgreen15;
+    border-bottom: 1px solid $dgreen25;
+    .w-paragraph {
+        color: $white;
+    }
+}
+
+.w-cta-container {
+    padding: 8px 0;
+    margin: 14px 0;
+    width: auto;
+    background-color: $dgreen20;
+    border: 1px solid $dgreen25;
+    border-radius: $round-border-small;
+    
+    .w-cta-content {
+        @include flex-row;
+        align-items: center;
+    }
+
+    .w-cta-arrow {
+        transform: rotate(90deg);
+    }
+}
+
+.menu-item:hover {
+    transition: color 0.3s ease-in-out;
+    color: $green70 !important;
 }

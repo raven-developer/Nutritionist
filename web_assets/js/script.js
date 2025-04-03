@@ -29,5 +29,19 @@ document.addEventListener("DOMContentLoaded", function () {
         toggle_monthly.classList.remove("enabled");
     });
     
+    $(document).ready(function () {
+        let checkFooter = setInterval(function () {
+            let scrollToTopButton = $('#scrollToTop');
 
+            if (scrollToTopButton.length) {
+                console.log("Scroll to Top button found! ✅");
+                clearInterval(checkFooter); 
+
+                $(document).on('click', '#scrollToTop', function (e) {
+                    e.preventDefault();
+                    $('html, body').animate({ scrollTop: 0 }, 800, 'swing');
+                });
+            }
+        }, 500);
+    });
 });

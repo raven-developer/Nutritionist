@@ -49,11 +49,12 @@ h6.w-heading {
 }
 
 .w-par-bold {
-    @include font-setting(800, normal, inherit, $dgreen20);
+    @include font-setting(800, normal, inherit, $dgreen40);
 }
 
 .w-button {
     padding: 17px 20px 15px 20px;
+    height: fit-content;
 }
 
 .w-primary-button {

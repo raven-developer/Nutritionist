@@ -11,4 +11,17 @@
     .w-testimonial-bottom {
         padding: 18px 24px !important;
     }
+
+    footer, nav, .w-hero-section, .w-nav-cta {
+        display: none !important;
+    }
+    
+    .w-feature-icon {
+        padding: 12px;
+        
+        img {
+            height: 24px;
+            aspect-ratio: 1 / 1;
+        }
+    }
 }

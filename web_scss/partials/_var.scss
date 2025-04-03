@@ -190,6 +190,10 @@ $gray95: #F2F2F2;
 $white: #fff;
 $black: #000;
 
+//Sizes
+$round-border-small: 8px;
+$round-border-default: 12px;
+
 //@Mixins
 @mixin flex-center {
     align-items: center;
@@ -226,7 +230,7 @@ $black: #000;
     max-height: max-content;
     height: 100%;
     background-color: $bg-color;
-    @include round-border-small();
+    border-radius: $round-border-small;
     transition: all 350ms ease-in-out;
     cursor: pointer;
 }
@@ -238,14 +242,6 @@ $black: #000;
 
 @mixin bottom-border {
     border-bottom: 3px solid $green70;
-}
-
-@mixin round-border-small {
-    border-radius: 8px;
-}
-
-@mixin round-border-default {
-    border-radius: 12px;
 }
 
 @mixin grid-2-col($column) {

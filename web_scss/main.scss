@@ -4,7 +4,10 @@
 @use "partials/nav";
 @use "partials/ui";
 @use "partials/responsive";
-@import "partials/var";
+
+html {
+    scroll-behavior: auto;
+}
 
 .w-col-42456 {
     padding: 0 0 0 40px;
