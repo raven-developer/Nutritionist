@@ -1,31 +1,145 @@
 //Styles for responsive only
-@use '_var.scss' as *;
+@use '_var.scss'as *;
 
 @media screen and (max-width: 1024px) {
-    .w-plan-section .w-card-grid, .w-testimonial-section .w-card-grid, .w-card-grid {
+    html {
+        font-size: 16px
+    }
+
+    h1.w-heading {
+        font-size: 2.375rem;
+    }
+
+    h2.w-heading {
+        font-size: 2rem;
+    }
+
+    h3.w-heading {
+        font-size: 1.75rem;
+    }
+
+    h4.w-heading {
+        font-size: 1.5rem;
+    }
+
+    h5.w-heading {
+        font-size: 1.25rem;
+    }
+
+    h6.w-heading {
+        font-size: 1.15rem;
+    }
+
+    .w-paragraph {
+        font-size: 15px;
+        letter-spacing: .5px;
+    }
+
+    .gap-default {
+        gap: 24px;
+    }
+
+    footer {
+        .w-footer-section {
+            padding: 30px 0;
+        }
+
+        .w-footer-info {
+            display: grid;
+            grid-template-areas:
+                "logo back"
+                "menu menu";
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .footer-logo {
+            grid-area: logo;
+            justify-self: start;
+        }
+
+        .w-back {
+            grid-area: back;
+            justify-self: end;
+        }
+
+        .footer-menu {
+            grid-area: menu;
+
+            .menu-link {
+                flex-wrap: wrap;
+            }
+        }
+
+        .footer-logo {
+            width: 100%;
+            height: 40px;
+        }
+
+        .back-to-top-arrow {
+            padding: 12px;
+
+            img {
+                height: 24px;
+                width: 24px;
+            }
+        }
+
+        .w-inner-contact,
+        .w-footer-contact {
+            @include flex-column;
+            gap: 20px;
+        }
+
+        .w-footer-contact {
+            padding: 20px;
+        }
+
+        .w-inner-contact {
+            width: 100%;
+        }
+
+        .w-contact-card {
+            justify-content: center;
+        }
+    }
+
+    .w-plan-section .w-card-grid,
+    .w-testimonial-section .w-card-grid,
+    .w-card-grid {
         @include grid-2-col(1);
     }
-    .w-plan-card, .w-testimonial-top, .w-feature-card, .w-blog-card {
+
+    .w-testimonial-top,
+    .w-feature-card {
         padding: 24px !important;
     }
+
+    .w-plan-card,
+    .w-blog-card {
+        padding: 28px !important;
+    }
+
     .w-testimonial-bottom {
         padding: 18px 24px !important;
     }
 
-    footer, nav, .w-hero-section, .w-nav-cta {
+    #navbar,
+    .w-hero-section,
+    .w-nav-cta {
         display: none !important;
     }
-    
+
     .w-feature-card .w-feature-icon {
         padding: 12px;
-        
+
         img {
             height: 24px;
             aspect-ratio: 1 / 1;
         }
     }
 
-    .w-paragraph {
-        font-size: 16px;
+    h2.w-plan-amount {
+        font-size: 2.375rem;
     }
+
 }

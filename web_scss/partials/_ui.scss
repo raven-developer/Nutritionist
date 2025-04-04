@@ -324,10 +324,12 @@ body {
 
     .w-plan-heading {
         @include flex-column;
-
-        .w-paragraph {
-            color: $gray30;
-        }
+    }
+    .w-paragraph {
+        color: $gray30;
+    }
+    .w-plan-amount {
+        color: $dgreen25;
     }
 
     .w-plan-cta {
