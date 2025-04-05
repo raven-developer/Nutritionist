@@ -49,6 +49,7 @@ navLinks.forEach(link => {
 
 });
 
+// Function to update SEO meta tags
 function updateSEOMetaTags(pageTitle, pageDescription, pageKeywords, pageThumbnail, homeUrl, canonicalUrl) {
     // Update the meta title
     document.title = pageTitle;
@@ -113,9 +114,11 @@ function updateSEOMetaTags(pageTitle, pageDescription, pageKeywords, pageThumbna
     if (canonicalTag) {
         canonicalTag.setAttribute('href', canonicalUrl);
     }
+}
 
-    // Update or create Schema.org JSON-LD script tag
-    let schemaScript = document.querySelector('script[type="application/ld+json"]');
+// Function to update Schema.org JSON-LD
+function updateSchema(pageTitle, pageDescription, pageKeywords, pageThumbnail, homeUrl) {
+    // Check if the schema script tag exists
     if (schemaScript) {
         // Parse the existing schema content and update
         let schemaData = JSON.parse(schemaScript.textContent);
@@ -149,6 +152,8 @@ function updateSEOMetaTags(pageTitle, pageDescription, pageKeywords, pageThumbna
     }
 }
 
-// Call the function with the variables
+// Call the functions with the variables
 updateSEOMetaTags(pageTitle, pageDescription, pageKeywords, pageThumbnail, homeUrl, canonicalUrl);
+updateSchema(pageTitle, pageDescription, pageKeywords, pageThumbnail, homeUrl);
+
 
