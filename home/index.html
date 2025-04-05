@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
+    <link href="../web_assets/images/favicon.png" rel="shortcut icon" type="image/x-icon">
     <link rel="stylesheet" href="../web_assets/css/style.css">
     <script src="../web_assets/js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -14,7 +15,7 @@
     <!-- CTA -->
     <div class="w-nav-cta">
         <div class="w-container">
-            <div class="w-inner-row gap-medium w-center-row w-cta-container">
+            <div class="w-inner-row w-center-row w-cta-container gap-medium">
                 <div class="w-cta-content gap-xsmall">
                     <div>
                         <img src="../web_assets/images/Vector.svg" alt="">
@@ -23,7 +24,7 @@
                 </div>
                 <div class="w-cta-arrow">
                     <img src="../web_assets/images/arrow-small-up.svg" alt="Small Arrow">
-                </div>                
+                </div>
             </div>
         </div>
     </div>
@@ -415,6 +416,35 @@
         });
 
         observer.observe(document.body, { childList: true, subtree: true });
+    });
+
+    function toggleMenu() {
+
+        const hamburger = document.getElementById('hamburger');
+        const cross = document.getElementById('cross');
+        const navLinks = document.getElementById('nav-menu');
+        const body = document.body;
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.add('show');
+            body.style.overflow = 'hidden';
+        });
+
+        cross.addEventListener('click', () => {
+            navLinks.classList.remove('show');
+            body.style.overflow = '';
+        });
+    }
+
+    const navLinks = document.querySelectorAll('.nav-menu .menu-item');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const nav = document.querySelector('.nav-menu .nav-menu-mobile');
+            navLinks.classList.remove('show');
+            body.style.overflow = '';
+        });
+
     });
 
 </script>

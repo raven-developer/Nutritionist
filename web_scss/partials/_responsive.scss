@@ -39,68 +39,12 @@
         gap: 24px;
     }
 
-    footer {
-        .w-footer-section {
-            padding: 30px 0;
-        }
+    .w-cta-container.gap-medium {
+        column-gap: 18px;
+    }
 
-        .w-footer-info {
-            display: grid;
-            grid-template-areas:
-                "logo back"
-                "menu menu";
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .footer-logo {
-            grid-area: logo;
-            justify-self: start;
-        }
-
-        .w-back {
-            grid-area: back;
-            justify-self: end;
-        }
-
-        .footer-menu {
-            grid-area: menu;
-
-            .menu-link {
-                flex-wrap: wrap;
-            }
-        }
-
-        .footer-logo {
-            width: 100%;
-            height: 40px;
-        }
-
-        .back-to-top-arrow {
-            padding: 12px;
-
-            img {
-                height: 24px;
-                width: 24px;
-            }
-        }
-
-        .w-inner-contact,
-        .w-footer-contact {
-            @include flex-column;
-            gap: 20px;
-        }
-
-        .w-footer-contact {
-            padding: 20px;
-        }
-
-        .w-inner-contact {
-            width: 100%;
-        }
-
-        .w-contact-card {
-            justify-content: center;
-        }
+    .w-cta-content.gap-xsmall {
+        column-gap: 12px;
     }
 
     .w-plan-section .w-card-grid,
@@ -122,10 +66,8 @@
     .w-testimonial-bottom {
         padding: 18px 24px !important;
     }
-
-    #navbar,
-    .w-hero-section,
-    .w-nav-cta {
+    
+    .w-hero-section {
         display: none !important;
     }
 
@@ -141,5 +83,6 @@
     h2.w-plan-amount {
         font-size: 2.375rem;
     }
+
 
 }

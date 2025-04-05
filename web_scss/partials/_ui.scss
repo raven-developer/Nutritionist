@@ -1,5 +1,5 @@
 //This stylesheet is for UI Styles
-@use '_var.scss' as *;
+@use '_var.scss'as *;
 
 body {
     background-color: $green97;
@@ -175,7 +175,7 @@ body {
         @include flex-row;
         align-items: center;
         justify-content: center;
-        
+
         img {
             height: 40px;
             aspect-ratio: 1 / 1;
@@ -325,9 +325,11 @@ body {
     .w-plan-heading {
         @include flex-column;
     }
+
     .w-paragraph {
         color: $gray30;
     }
+
     .w-plan-amount {
         color: $dgreen25;
     }
@@ -358,19 +360,20 @@ body {
     justify-content: center;
     background-color: $dgreen15;
     border-bottom: 1px solid $dgreen25;
+
     .w-paragraph {
         color: $white;
     }
 }
 
 .w-cta-container {
-    padding: 8px 0;
+    padding: 8px 8px;
     margin: 14px 0;
     width: auto;
     background-color: $dgreen20;
     border: 1px solid $dgreen25;
     border-radius: $round-border-small;
-    
+
     .w-cta-content {
         @include flex-row;
         align-items: center;
