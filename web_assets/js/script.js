@@ -1,3 +1,14 @@
+
+fetch('../web_include/seo-meta.html')
+    .then(response => response.text())
+    .then(data => {
+        const head = document.head || document.getElementsByTagName('head')[0];
+        const div = document.createElement('div');
+        div.innerHTML = data;
+        Array.from(div.children).forEach(child => head.appendChild(child));
+    });
+
+
 document.addEventListener("DOMContentLoaded", function () {
     // Load Navbar
     fetch("../web_include/nav.html")
@@ -28,13 +39,13 @@ document.addEventListener("DOMContentLoaded", function () {
         toggle_yearly.classList.add("enabled");
         toggle_monthly.classList.remove("enabled");
     });
-    
+
     $(document).ready(function () {
         let checkFooter = setInterval(function () {
             let scrollToTopButton = $('#scrollToTop');
 
             if (scrollToTopButton.length) {
-                clearInterval(checkFooter); 
+                clearInterval(checkFooter);
 
                 $(document).on('click', '#scrollToTop', function (e) {
                     e.preventDefault();

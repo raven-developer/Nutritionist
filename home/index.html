@@ -2,10 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
-    <link href="../web_assets/images/favicon.png" rel="shortcut icon" type="image/x-icon">
     <link rel="stylesheet" href="../web_assets/css/style.css">
     <script src="../web_assets/js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -391,60 +388,15 @@
 
     <!-- Footer -->
     <footer id="footer"></footer>
+    <script>
+        let pageTitle = "Personalized Nutrition Coaching - Achieve Optimal Health";
+        let pageDescription = "Welcome to Nutritionist, your partner in achieving optimal health through personalized nutrition coaching. Our certified nutritionists provide customized plans and ongoing support for weight loss and health transformation. Start your journey today.";
+        let pageKeywords = "nutrition, weight loss, personalized nutrition, health coach, diet plans, nutritionist, transformation, health optimization";
+        let pageThumbnail = "https://raven-developer.github.io/Nutritionist/web_assets/images/Image.png";
+        let homeUrl = "https://github.com/raven-developer/Nutritionist";
+        let canonicalUrl = "https://github.com/raven-developer/Nutritionist";
+    </script>
+    <script src="../web_assets/js/footer-script.js"></script>
 </body>
 
 </html>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        function setActiveMenuItem() {
-            let currentPage = window.location.pathname.split("/").filter(Boolean).pop();
-            let activeItem = document.querySelector(`nav .menu-item[data-page="${currentPage}"]`);
-
-            if (activeItem) {
-                activeItem.classList.add("active");
-            }
-        }
-
-        setActiveMenuItem();
-
-        const observer = new MutationObserver(() => {
-            setActiveMenuItem();
-            if (document.querySelector("nav .menu-item.active")) {
-                observer.disconnect();
-            }
-        });
-
-        observer.observe(document.body, { childList: true, subtree: true });
-    });
-
-    function toggleMenu() {
-
-        const hamburger = document.getElementById('hamburger');
-        const cross = document.getElementById('cross');
-        const navLinks = document.getElementById('nav-menu');
-        const body = document.body;
-
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.add('show');
-            body.style.overflow = 'hidden';
-        });
-
-        cross.addEventListener('click', () => {
-            navLinks.classList.remove('show');
-            body.style.overflow = '';
-        });
-    }
-
-    const navLinks = document.querySelectorAll('.nav-menu .menu-item');
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            const nav = document.querySelector('.nav-menu .nav-menu-mobile');
-            navLinks.classList.remove('show');
-            body.style.overflow = '';
-        });
-
-    });
-
-</script>
