@@ -152,8 +152,7 @@ function updateSchema(pageTitle, pageDescription, pageKeywords, pageThumbnail, h
     }
 }
 
-// Call the functions with the variables
-updateSEOMetaTags(pageTitle, pageDescription, pageKeywords, pageThumbnail, homeUrl, canonicalUrl);
-updateSchema(pageTitle, pageDescription, pageKeywords, pageThumbnail, homeUrl);
-
-
+window.addEventListener('load', function() {
+    updateSEOMetaTags(pageTitle, pageDescription, pageKeywords, pageThumbnail, homeUrl, canonicalUrl);
+    updateSchema(pageTitle, pageDescription, pageKeywords, pageThumbnail, homeUrl);
+});
