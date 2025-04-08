@@ -5,10 +5,6 @@ body {
     background-color: $green97;
 }
 
-.w-hero-section {
-    height: 76vh;
-}
-
 .w-section {
     @include flex-row;
     @include flex-center;
@@ -87,6 +83,63 @@ body {
     gap: 4px
 }
 
+.w-hero-section {
+    margin-bottom: 75px;
+    max-height: 820px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.w-hero-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "hero-image hero-content";
+}
+
+.w-hero-container {
+
+    .w-hero-content {
+        grid-area: hero-content;
+        margin: 130px 0;
+        @include flex-column;
+        padding-left: 45px;
+    }
+
+    .w-hero-image {
+        grid-area: hero-image;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-end;
+
+        img {
+            position: relative;
+            z-index: 1;
+            max-height: 820px;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.w-hero-bg {
+    position: absolute;
+    width: 49%;
+    height: 820px;
+    overflow: hidden;
+    border-bottom-right-radius: 60px;
+    left: 0;
+
+    img {
+        height: 125%;
+        width: 100%;
+        object-fit: cover;
+
+    }
+}
+
 .w-bottom-border {
     @include bottom-border;
     max-width: max-content;
@@ -147,14 +200,6 @@ body {
 .w-client-ratings {
     @include flex-row;
     @include flex-center;
-}
-
-.w-hero-image {
-    position: absolute;
-    left: -30px;
-    top: 0;
-    width: 70%;
-    max-width: none;
 }
 
 .w-feature-card {
@@ -361,6 +406,11 @@ body {
     justify-content: center;
     background-color: $dgreen15;
     border-bottom: 1px solid $dgreen25;
+    flex-grow: 1;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+    /* or hidden if absolutely needed */
 
     .w-paragraph {
         color: $white;

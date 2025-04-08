@@ -8,7 +8,6 @@ fetch('../web_include/seo-meta.html')
         Array.from(div.children).forEach(child => head.appendChild(child));
     });
 
-
 document.addEventListener("DOMContentLoaded", function () {
     // Load Navbar
     fetch("../web_include/nav.html")
@@ -55,3 +54,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 500);
     });
 });
+

@@ -1,4 +1,4 @@
-@use 'partials/var.scss' as *;
+@use 'partials/var.scss'as *;
 @use "partials/reset";
 @use "partials/footer";
 @use "partials/nav";
@@ -8,8 +8,4 @@
 
 html {
     scroll-behavior: auto;
-}
-
-.w-col-42456 {
-    padding: 0 0 0 40px;
 }
