@@ -1,5 +1,5 @@
 
-fetch('../web_include/seo-meta.html')
+fetch('seo-meta.html')
     .then(response => response.text())
     .then(data => {
         const head = document.head || document.getElementsByTagName('head')[0];

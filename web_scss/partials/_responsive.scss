@@ -1,13 +1,38 @@
 //Styles for responsive only
 @use '_var.scss'as *;
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
+    .w-hero-section {
+        padding: 16px 0;
+    }
+    .w-hero-layout {
+        $hero-max-height: 200vh;
+        max-height: $hero-max-height;
+        height: auto;
+    
+        .w-hero-image {
+            max-height: $hero-max-height;
+            height: 100%;
+        }
+    
+        .w-hero-content {
+            margin: 60px 0;
+            padding-left: 40px;
+
+            h1.w-heading {
+                font-size: 3.288rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
     html {
         font-size: 16px
     }
 
     h1.w-heading {
-        font-size: 2.375rem;
+        font-size: 2.575rem;
     }
 
     h2.w-heading {
@@ -80,5 +105,61 @@
         font-size: 2.375rem;
     }
 
+    .w-hero-bg {
+        display: none;;
+    }
 
+    .w-hero-section {
+        max-height: 100%;
+    }
+
+    .w-hero-layout {
+        @include flex-column;
+        flex-direction: column-reverse;
+
+        .gap-large {
+            gap: 50px;
+        }
+
+        .w-row-content {
+            justify-content: center;
+            
+        }
+        
+        .w-client-ratings {
+            flex-direction: column-reverse;
+
+            .w-client {
+                height: 40px;
+                width: 40px;
+            }
+            .w-paragraph {
+                font-size: 18px;
+            }
+        }
+
+        .w-hero-content {
+            padding: 0;
+            margin: 30px 0 -30px 0;
+
+            .w-special-heading {
+                display: flex;
+                justify-content: center;
+            }
+
+            h1.w-heading {
+                text-align: center;
+            }
+
+            .w-paragraph:not(.w-client-ratings .w-paragraph) {
+                text-align: center;
+            }
+        }
+
+        .w-hero-image {
+            max-height: $hero-max-height;
+            height: inherit;
+            aspect-ratio: 4 / 3;
+        }
+    }
 }

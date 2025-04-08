@@ -38,7 +38,7 @@ body {
 .w-container {
     max-width: 1596px;
     width: 100%;
-    margin: 0 20px;
+    margin: 0 12px;
 }
 
 .w-inner-col {
@@ -84,61 +84,63 @@ body {
 }
 
 .w-hero-section {
-    margin-bottom: 75px;
-    max-height: 820px;
-    height: 100%;
     display: flex;
     justify-content: center;
+    position: relative;
+    padding: 75px 0;
 }
 
 .w-hero-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: .75fr 1fr;
     grid-template-areas:
         "hero-image hero-content";
-}
-
-.w-hero-container {
-
-    .w-hero-content {
-        grid-area: hero-content;
-        margin: 130px 0;
-        @include flex-column;
-        padding-left: 45px;
-    }
+    align-items: stretch;
+    max-height: $hero-max-height;
+    height: auto;
 
     .w-hero-image {
-        grid-area: hero-image;
-        position: relative;
+        max-height: $hero-max-height;
+        height: inherit;
         overflow: hidden;
-        display: flex;
-        justify-content: flex-end;
-
+        box-sizing: border-box;
+        border-radius: 40px;
+        
         img {
             position: relative;
-            z-index: 1;
-            max-height: 820px;
+            z-index: 0;
             height: 100%;
+            width: 100%;
             object-fit: cover;
         }
     }
-}
 
-.w-hero-bg {
-    position: absolute;
-    width: 49%;
-    height: 820px;
-    overflow: hidden;
-    border-bottom-right-radius: 60px;
-    left: 0;
-
-    img {
-        height: 125%;
-        width: 100%;
-        object-fit: cover;
-
+    .w-hero-content {
+        grid-area: hero-content;
+        margin: 120px 0;
+        @include flex-column;
+        padding-left: 80px;
+        height: max-content;
+        justify-content: center;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .w-bottom-border {
     @include bottom-border;
@@ -154,6 +156,7 @@ body {
     border: 1px solid $green70;
     width: max-content;
     border-radius: 50px / 50px;
+    background-color: $green97;
 }
 
 .w-client {
@@ -275,6 +278,11 @@ body {
         aspect-ratio: 16/9;
         border-radius: $round-border-small;
         flex-grow: 0;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 
     .w-blog-category {
