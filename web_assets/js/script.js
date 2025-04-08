@@ -1,13 +1,3 @@
-
-fetch('seo-meta.html')
-    .then(response => response.text())
-    .then(data => {
-        const head = document.head || document.getElementsByTagName('head')[0];
-        const div = document.createElement('div');
-        div.innerHTML = data;
-        Array.from(div.children).forEach(child => head.appendChild(child));
-    });
-
 document.addEventListener("DOMContentLoaded", function () {
     // Load Navbar
     fetch("../web_include/nav.html")
