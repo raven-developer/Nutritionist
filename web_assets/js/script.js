@@ -28,20 +28,5 @@ document.addEventListener("DOMContentLoaded", function () {
         toggle_yearly.classList.add("enabled");
         toggle_monthly.classList.remove("enabled");
     });
-
-    $(document).ready(function () {
-        let checkFooter = setInterval(function () {
-            let scrollToTopButton = $('#scrollToTop');
-
-            if (scrollToTopButton.length) {
-                clearInterval(checkFooter);
-
-                $(document).on('click', '#scrollToTop', function (e) {
-                    e.preventDefault();
-                    $('html, body').animate({ scrollTop: 0 }, 800, 'swing');
-                });
-            }
-        }, 500);
-    });
 });
 

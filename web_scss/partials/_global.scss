@@ -1,5 +1,5 @@
 //Styles for Global Stlying
-@use '_var.scss' as *;
+@use '_var.scss'as *;
 
 h1,
 h2,
@@ -18,6 +18,11 @@ a,
 .w-paragraph {
     @include font-setting(500, normal, 1rem, $gray30);
     line-height: 1.5;
+
+    span:not(:last-child){
+        display: inline-block;
+        margin-bottom: 12px;
+    }
 }
 
 .w-heading {
@@ -63,7 +68,7 @@ h6.w-heading {
 
 .w-secondary-button {
     @include button-setting($green95);
-    border: 1px solid $green85;
+    outline: 1px solid $green85;
     padding: 16px 20px 14px 20px;
 }
 
@@ -75,11 +80,11 @@ h6.w-heading {
 
 .w-secondary-button {
     @include button-setting($green95);
-    border: 1px solid $green85;
+    outline: 1px solid $green85;
     padding: 16px 20px 14px 20px;
 
     &:hover {
-        border-color: $dgreen15;
+        outline-color: $dgreen15;
     }
 }
 

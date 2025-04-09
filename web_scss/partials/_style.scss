@@ -33,6 +33,20 @@ body {
 .w-inner-col-center {
     @include flex-column;
     @include flex-center();
+
+    .w-heading {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.w-inner-full {
+    @include flex-column;
+
+    .w-heading,
+    .w-paragraph {
+        width: 100%;
+    }
 }
 
 .w-container {
@@ -83,19 +97,27 @@ body {
     gap: 4px
 }
 
-.w-hero-section {
+.w-hero-section,
+.w-header-section {
     display: flex;
     justify-content: center;
     position: relative;
+}
+
+.w-hero-section {
     padding: 75px 0;
+}
+
+.w-header-section {
+    padding-top: 75px;
 }
 
 .w-hero-layout {
     display: grid;
-    grid-template-columns: .75fr 1fr;
+    grid-template-columns: .8fr 1fr;
     grid-template-areas:
         "hero-image hero-content";
-    align-items: stretch;
+    align-items: center;
     max-height: $hero-max-height;
     height: auto;
 
@@ -105,7 +127,7 @@ body {
         overflow: hidden;
         box-sizing: border-box;
         border-radius: 40px;
-        
+
         img {
             position: relative;
             z-index: 0;
@@ -125,23 +147,6 @@ body {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .w-bottom-border {
     @include bottom-border;
     max-width: max-content;
@@ -153,7 +158,7 @@ body {
     align-items: center;
     position: relative;
     padding: 8px;
-    border: 1px solid $green70;
+    outline: 1px solid $green70;
     width: max-content;
     border-radius: 50px / 50px;
     background-color: $green97;
@@ -205,16 +210,25 @@ body {
     @include flex-center;
 }
 
-.w-feature-card {
+.w-card {
     @include flex-column;
     @include card-background($green95);
     border-radius: $round-border-default;
+    justify-content: start;
+
+    .w-heading {
+        width: auto;
+        text-align: unset;
+    }
+}
+
+.w-feature-card, .w-achievement-card {
     padding: 40px 50px;
     max-width: 996px;
-    transition: all 0.3s ease-in-out;
+    //transition: all 0.3s ease-in-out;
     box-shadow: none;
 
-    .w-feature-icon {
+    .w-card-icon {
         padding: 14px;
         flex-shrink: 0;
         max-height: 68px;
@@ -231,16 +245,16 @@ body {
         }
     }
 
-    .w-feature-title {
+    .w-card-title {
         @include flex-row;
         @include flex-center();
     }
 
-    &:hover {
-        border-color: $dgreen40;
+    /*&:hover {
+        outline-color: $dgreen40;
         box-shadow: 20px 20px 60px rgba(26, 49, 41, 0.07),
             -20px -20px 60px #ffffff;
-    }
+    }*/
 }
 
 .w-center-heading {
@@ -259,10 +273,6 @@ body {
 
 .w-blog-card {
     padding: 40px;
-    @include flex-column;
-    @include card-background($green95);
-    border-radius: $round-border-default;
-    justify-content: space-between;
     max-width: 996px;
     height: auto;
     transition: all 0.3s ease-in-out;
@@ -294,7 +304,7 @@ body {
     }
 
     &:hover {
-        border-color: $dgreen40;
+        outline-color: $dgreen40;
         box-shadow: 20px 20px 60px rgba(26, 49, 41, 0.07),
             -20px -20px 60px #ffffff;
     }
@@ -368,10 +378,7 @@ body {
 
 
 .w-plan-card {
-    @include flex-column;
-    @include card-background($green95);
     padding: 50px;
-    border-radius: $round-border-default;
     transition: all 0.3s ease-in-out;
     box-shadow: none;
     justify-content: space-between;
@@ -397,13 +404,13 @@ body {
         }
 
         .w-button {
-            max-width: calc(100% - 50px);
+            max-width: 100%;
             text-align: center;
         }
     }
 
     &:hover {
-        border-color: $dgreen40;
+        outline-color: $dgreen40;
         box-shadow: 20px 20px 60px rgba(26, 49, 41, 0.07),
             -20px -20px 60px #ffffff;
     }
@@ -430,7 +437,7 @@ body {
     margin: 14px 0;
     width: auto;
     background-color: $dgreen20;
-    border: 1px solid $dgreen25;
+    outline: 1px solid $dgreen25;
     border-radius: $round-border-small;
 
     .w-cta-content {
@@ -446,4 +453,111 @@ body {
 .menu-item:hover {
     transition: color 0.3s ease-in-out;
     color: $green70 !important;
+}
+
+.w-header-banner {
+    width: 100%;
+    height: auto;
+}
+
+.w-header-01 {
+    .w-header-background {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+}
+
+.w-welcome-section .w-card {
+    padding: 75px 100px;
+}
+
+.w-item-container {
+    @include flex-row;
+    align-items: stretch;
+    justify-content: space-evenly;
+    gap: 0;
+}
+
+.w-item-outer-container {
+    outline: 1px solid $green85;
+    border-radius: $round-border-default;
+    overflow: hidden;
+}
+
+.w-story-item {
+    background-color: $green95;
+    position: relative;
+
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+        
+        .w-item-content {
+            align-items: flex-end;
+        }
+
+        .w-heading,
+        .w-paragraph {
+            text-align: right;
+        }
+    }
+
+    &:nth-child(odd) {
+
+        .w-heading,
+        .w-paragraph {
+            text-align: left;
+        }
+    }
+
+    .w-item-image,
+    .w-item-content {
+        flex-grow: 1;
+        min-width: 50%;
+        width: 100%;
+    }
+
+    .w-item-image {
+        height: auto;
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .w-item-content {
+        padding: 60px;
+        @include flex-column;
+        justify-content: center;
+    }
+
+    .w-item-divider {
+        width: 18px;
+        background-color: $green70;
+        flex-shrink: 0;
+    }
+}
+
+.w-cta-section{
+    .w-card {
+        padding: 80px;
+        flex-direction: row;
+        align-items: center;
+        gap: 150px;
+        position: relative
+    }
+
+    .w-button {
+        padding: 26px 28px 24px 28px;
+    }
+    .w-cta-section-content {
+        @include flex-column
+    }
 }

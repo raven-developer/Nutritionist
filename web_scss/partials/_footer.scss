@@ -5,6 +5,7 @@ footer {
     background-color: $dgreen15;
     display: flex;
     justify-content: center;
+    margin-top: 50px;
 }
 
 .w-footer-section {
@@ -69,14 +70,14 @@ footer {
             background-color: $dgreen20;
             border-radius: 50%;
             image-rendering: -webkit-optimize-contrast;
-            border: 1px solid $dgreen25;
+            outline: 1px solid $dgreen25;
         }
     }
 }
 
 .w-footer-contact {
     background-color: $dgreen20;
-    border: 1px solid $dgreen25;
+    outline: 1px solid $dgreen25;
     padding: 16px 30px 16px 20px;
     border-radius: $round-border-small;
     @include flex-row;
@@ -99,11 +100,11 @@ footer {
 }
 
 .w-ghost-button {
-    border: 1px solid $dgreen25;
-    transition: border-color 0.3s ease-in-out;
+    outline: 1px solid $dgreen25;
+    transition: outline-color 0.3s ease-in-out;
 
     &:hover {
-        border-color: $green70;
+        outline-color: $green70;
     }
 }
 
@@ -117,7 +118,7 @@ footer {
         }
 
         .back-to-top-arrow {
-            border-color: $green70;
+            outline-color: $green70;
             transition: all 0.3s ease-in-out;
         }
     }

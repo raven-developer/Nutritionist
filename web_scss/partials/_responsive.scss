@@ -5,16 +5,17 @@
     .w-hero-section {
         padding: 16px 0;
     }
+
     .w-hero-layout {
         $hero-max-height: 200vh;
         max-height: $hero-max-height;
         height: auto;
-    
+
         .w-hero-image {
             max-height: $hero-max-height;
             height: 100%;
         }
-    
+
         .w-hero-content {
             margin: 60px 0;
             padding-left: 40px;
@@ -29,6 +30,10 @@
 @media screen and (max-width: 992px) {
     html {
         font-size: 16px
+    }
+
+    .gap-large {
+        gap: 50px;
     }
 
     h1.w-heading {
@@ -79,20 +84,23 @@
     }
 
     .w-testimonial-top,
-    .w-feature-card {
+    .w-feature-card,
+    .w-achievement-card {
         padding: 24px !important;
     }
 
     .w-plan-card,
-    .w-blog-card {
-        padding: 28px !important;
+    .w-blog-card,
+    .w-welcome-section .w-card,
+    .w-cta-section .w-card {
+        padding: 28px;
     }
 
     .w-testimonial-bottom {
         padding: 18px 24px !important;
     }
 
-    .w-feature-card .w-feature-icon {
+    .w-feature-card .w-card-icon, .w-achievement-card .w-card-icon {
         padding: 12px;
 
         img {
@@ -106,7 +114,8 @@
     }
 
     .w-hero-bg {
-        display: none;;
+        display: none;
+        ;
     }
 
     .w-hero-section {
@@ -123,9 +132,9 @@
 
         .w-row-content {
             justify-content: center;
-            
+
         }
-        
+
         .w-client-ratings {
             flex-direction: column-reverse;
 
@@ -133,6 +142,7 @@
                 height: 40px;
                 width: 40px;
             }
+
             .w-paragraph {
                 font-size: 18px;
             }
@@ -160,6 +170,21 @@
             max-height: $hero-max-height;
             height: inherit;
             aspect-ratio: 4 / 3;
+        }
+    }
+
+    .w-cta-section {
+        .w-card {
+            flex-direction: column;
+            gap: 50px;
+        }
+        .w-cta-section-content {
+            text-align: center;
+        }
+        .w-button {
+            padding: 26px 28px 24px 28px;
+            max-width: 100%;
+            text-align: center;
         }
     }
 }
