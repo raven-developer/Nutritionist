@@ -25,6 +25,10 @@
             }
         }
     }
+
+    .w-story-item .w-item-content {
+        padding: 40px;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -185,6 +189,35 @@
             padding: 26px 28px 24px 28px;
             max-width: 100%;
             text-align: center;
+        }
+    }
+
+    .w-section {
+        padding: 50px 0;
+    }
+
+    header {
+        padding-top: 50px;
+    }
+
+    .w-story-item, .w-story-item:nth-child(even), .w-story-item:nth-child(odd) {
+        flex-direction: column;
+
+        .w-item-content {
+            align-items: flex-start;
+            padding: 30px;
+        }
+
+        .w-item-divider {
+            width: 100%;
+            height: 12px;
+            background-color: $green70;
+            flex-shrink: 0;
+        }
+
+        .w-heading,
+        .w-paragraph {
+            text-align: left;
         }
     }
 }

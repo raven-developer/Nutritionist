@@ -52,7 +52,7 @@ body {
 .w-container {
     max-width: 1596px;
     width: 100%;
-    margin: 0 12px;
+    margin: 0 16px;
 }
 
 .w-inner-col {
@@ -108,7 +108,7 @@ body {
     padding: 75px 0;
 }
 
-.w-header-section {
+header {
     padding-top: 75px;
 }
 
@@ -460,7 +460,7 @@ body {
     height: auto;
 }
 
-.w-header-01 {
+.w-header-style-01 {
     .w-header-background {
         width: 100%;
 
@@ -559,5 +559,51 @@ body {
     }
     .w-cta-section-content {
         @include flex-column
+    }
+}
+
+.w-header-style-02 {
+
+    .w-card {
+        padding: 80px 100px;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+
+        .w-heading, .w-paragraph {
+            text-align: center;
+        }
+    }
+    
+    .w-header-content {
+        @include flex-column;
+        max-width: 1280px;
+        z-index: 1;
+    }
+
+    .w-header-emblem {
+        flex-shrink: 0;
+        width: 102px;
+        height: 102px;
+        position: relative;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            position: relative;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            width: 749px;
+            height: 380px;
+            background: url('../../web_assets/images/header-emblem-.png');
+            z-index: 0;
+        }
     }
 }
