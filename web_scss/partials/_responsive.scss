@@ -1,6 +1,14 @@
 //Styles for responsive only
 @use '_var.scss'as *;
 
+//Laptop Large
+@media screen and (max-width: 1440px) {
+    .w-container {
+        margin: 0 64px;
+    }
+}
+
+//Laptop Small
 @media screen and (max-width: 1280px) {
     .w-hero-section {
         padding: 16px 0;
@@ -31,7 +39,11 @@
     }
 }
 
+//Tablet to Mobile
 @media screen and (max-width: 992px) {
+    .w-container {
+        margin: 0 16px;
+    }
     html {
         font-size: 16px
     }
@@ -41,27 +53,27 @@
     }
 
     h1.w-heading {
-        font-size: 2.575rem;
+        font-size: 2.027rem;
     }
 
     h2.w-heading {
-        font-size: 2rem;
+        font-size: 1.802rem;
     }
 
     h3.w-heading {
-        font-size: 1.75rem;
+        font-size: 1.602rem;
     }
 
     h4.w-heading {
-        font-size: 1.5rem;
+        font-size: 1.424rem;
     }
 
     h5.w-heading {
-        font-size: 1.25rem;
+        font-size: 1.266rem;
     }
 
     h6.w-heading {
-        font-size: 1.15rem;
+        font-size: 1.125rem;
     }
 
     .w-paragraph {
@@ -177,6 +189,24 @@
         }
     }
 
+    .w-header-style-02 {
+
+        .w-card {
+            padding: 28px;
+        }
+        
+        .w-header-content {
+            @include flex-column;
+            max-width: 1280px;
+            z-index: 1;
+        }
+    
+        .w-header-emblem {
+            width: 62px;
+            height: 62px;
+        }
+    }
+
     .w-cta-section {
         .w-card {
             flex-direction: column;
@@ -216,8 +246,9 @@
         }
 
         .w-heading,
-        .w-paragraph {
+        .w-paragraph {  
             text-align: left;
         }
     }
+    
 }

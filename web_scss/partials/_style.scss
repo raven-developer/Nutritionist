@@ -52,7 +52,7 @@ body {
 .w-container {
     max-width: 1596px;
     width: 100%;
-    margin: 0 16px;
+    margin: 0 auto;
 }
 
 .w-inner-col {
@@ -569,6 +569,7 @@ header {
         align-items: center;
         overflow: hidden;
         width: 100%;
+        border-radius: 12px 12px 0 0;
 
         .w-heading, .w-paragraph {
             text-align: center;
