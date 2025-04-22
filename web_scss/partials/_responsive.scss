@@ -4,7 +4,18 @@
 //Laptop Large
 @media screen and (max-width: 1440px) {
     .w-container {
-        margin: 0 64px;
+        margin: 0 80px;
+    }
+    
+    .w-step-card {
+    
+        .w-step-number span {
+            font-size: 100px;
+        }
+    
+        .w-card {
+            margin-top: 92px;
+        }
     }
 }
 
@@ -101,7 +112,8 @@
 
     .w-testimonial-top,
     .w-feature-card,
-    .w-achievement-card {
+    .w-achievement-card,
+    .w-process-card {
         padding: 24px !important;
     }
 
@@ -116,7 +128,7 @@
         padding: 18px 24px !important;
     }
 
-    .w-feature-card .w-card-icon, .w-achievement-card .w-card-icon {
+    .w-card-icon {
         padding: 12px;
 
         img {
