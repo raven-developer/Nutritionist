@@ -27,34 +27,27 @@ a,
 
 .w-heading {
     line-height: 1;
+    @include font-setting(700, normal, inherit, $dgreen15);
 }
 
-h1.w-heading {
+.w-hero-heading {
     @include font-setting(700, normal, 2.874rem, $dgreen15);
 }
 
-h2.w-heading {
+.w-section-heading, .w-plan-amount {
     @include font-setting(700, normal, 2.488rem, $dgreen15);
 }
 
-h3.w-heading {
-    @include font-setting(700, normal, 2.074rem, $dgreen15);
+.w-special-heading, .w-card-label {
+    @include font-setting(700, normal, 1.44rem, $dgreen15);
 }
 
-h4.w-heading {
+.w-plan-title {
     @include font-setting(600, normal, 1.728rem, $dgreen15);
 }
 
-h5.w-heading {
-    @include font-setting(600, normal, 1.44rem, $dgreen15);
-}
-
-h6.w-heading {
-    @include font-setting(600, normal, 1.2rem, $dgreen15);
-}
-
 .w-par-bold {
-    @include font-setting(800, normal, inherit, $dgreen40);
+    @include font-setting(700, normal, inherit, $dgreen40);
 }
 
 .w-button {
@@ -105,3 +98,5 @@ h6.w-heading {
         width: 72px;
     }
 }
+
+
