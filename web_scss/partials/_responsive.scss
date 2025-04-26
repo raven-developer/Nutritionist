@@ -1,26 +1,41 @@
 //Styles for responsive only
 @use '_var.scss'as *;
 
+@media screen and (min-width: 1440px) {
+    .w-categor, .w-category-container {
+        justify-content: center;
+    }
+}
+
 //Laptop Large
 @media screen and (max-width: 1440px) {
     .w-container {
         margin: 0 80px;
     }
-    
+
     .w-step-card {
-    
+
         .w-step-number span {
             font-size: 100px;
         }
-    
+
         .w-card {
             margin-top: 92px;
+        }
+    }
+
+    .w-category-container, .w-category {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+
+        .w-list-category {
+            padding: 12px 18px;
         }
     }
 }
 
 //Laptop Small
-@media screen and (max-width: 1280px) and (min-width: 993px){
+@media screen and (max-width: 1280px) and (min-width: 993px) {
     .w-hero-section {
         padding: 16px 0;
     }
@@ -48,6 +63,7 @@
     .w-story-item .w-item-content {
         padding: 40px;
     }
+
     .w-story-item .w-item-image img {
         height: 300px;
     }
@@ -58,6 +74,7 @@
     .w-container {
         margin: 0 16px;
     }
+
     html {
         font-size: 16px
     }
@@ -73,7 +90,7 @@
     .w-hero-heading {
         font-size: 2.25rem;
     }
-    
+
     .w-section-heading {
         font-size: 1.802rem;
     }
@@ -209,13 +226,13 @@
         .w-card {
             padding: 28px;
         }
-        
+
         .w-header-content {
             @include flex-column;
             max-width: 1280px;
             z-index: 1;
         }
-    
+
         .w-header-emblem {
             width: 62px;
             height: 62px;
@@ -227,9 +244,11 @@
             flex-direction: column;
             gap: 50px;
         }
+
         .w-cta-section-content {
             text-align: center;
         }
+
         .w-button {
             padding: 26px 28px 24px 28px;
             max-width: 100%;
@@ -245,7 +264,9 @@
         padding-top: 50px;
     }
 
-    .w-story-item, .w-story-item:nth-child(even), .w-story-item:nth-child(odd) {
+    .w-story-item,
+    .w-story-item:nth-child(even),
+    .w-story-item:nth-child(odd) {
         flex-direction: column;
 
         .w-item-content {
@@ -261,8 +282,21 @@
         }
 
         .w-heading,
-        .w-paragraph {  
+        .w-paragraph {
             text-align: left;
+        }
+    }
+
+    .w-category-container {
+
+        .w-list-category {
+            &:first-child {
+                margin-left: 28px;
+            }
+
+            &:last-child {
+                margin-right: 28px;
+            }
         }
     }
 }
