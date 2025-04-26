@@ -119,21 +119,102 @@
     <!-- Fold Section -->
     <main class="w-main-home w-fold-section">
         <section class="w-section w-category-section" id="w-category-section">
-            <div class="w-container w-category-container">
-                <ul class="w-category">
-                    <li class="w-paragraph w-list-category selected">Management Team</li>
-                    <li class="w-paragraph w-list-category">Nutritionists and Dietitians</li>
-                    <li class="w-paragraph w-list-category">Customer Support</li>
-                    <li class="w-paragraph w-list-category">Marketing and Communications</li>
-                    <li class="w-paragraph w-list-category">Technology and Development</li>
-                </ul>
-            </div>
+            <div class="w-container gap-large">
+                <div class="w-category-wrapper">
+                    <ul class="w-category">
+                        <li class="w-paragraph w-category-label selected">All</li>
+                        <li class="w-paragraph w-category-label">Management Team</li>
+                        <li class="w-paragraph w-category-label">Nutritionists and Dietitians</li>
+                        <li class="w-paragraph w-category-label">Customer Support</li>
+                        <li class="w-paragraph w-category-label">Marketing and Communications</li>
+                        <li class="w-paragraph w-category-label">Technology and Development</li>
+                    </ul>
+                </div>
+
+                <div class="w-inner-col-center gap-medium w-team-grid">
+                    <div class="w-team-card w-team-card-01">
+                        <div class="w-team-profile">
+                            <img src="../web_assets/images/Imageteam-1.png" alt="Sarah Mitchell image">
+                        </div>
+                        <div class="w-team-information">
+                            <p class="w-paragraph w-team-name">Sarah Mitchell</p>
+                            <p class="w-paragraph w-team-position">Founder and CEO</p>
+                        </div>
+                    </div>
+
+                    <div class="w-team-card w-team-card-02">
+                        <div class="w-team-profile">
+                            <img src="../web_assets/images/Imageteam-1.png" alt="Sarah Mitchell image">
+                        </div>
+                        <div class="w-team-information">
+                            <p class="w-paragraph w-team-name">Sarah Mitchell</p>
+                            <p class="w-paragraph w-team-position">Founder and CEO</p>
+                        </div>
+                    </div>
+
+                    <div class="w-team-card w-team-card-03">
+                        <div class="w-team-profile">
+                            <img src="../web_assets/images/Imageteam-1.png" alt="Sarah Mitchell image">
+                        </div>
+                        <div class="w-team-information">
+                            <p class="w-paragraph w-team-name">Sarah Mitchell</p>
+                            <p class="w-paragraph w-team-position">Founder and CEO</p>
+                        </div>
+                    </div>
+
+                    <div class="w-team-card w-team-card-04">
+                        <div class="w-team-profile">
+                            <img src="../web_assets/images/Imageteam-1.png" alt="Sarah Mitchell image">
+                        </div>
+                        <div class="w-team-information">
+                            <p class="w-paragraph w-team-name">Sarah Mitchell</p>
+                            <p class="w-paragraph w-team-position">Founder and CEO</p>
+                        </div>
+                    </div>
+
+                    <div class="w-team-card w-team-card-05">
+                        <div class="w-team-profile">
+                            <img src="../web_assets/images/Imageteam-1.png" alt="Sarah Mitchell image">
+                        </div>
+                        <div class="w-team-information">
+                            <p class="w-paragraph w-team-name">Sarah Mitchell</p>
+                            <p class="w-paragraph w-team-position">Founder and CEO</p>
+                        </div>
+                    </div>
+
+                    <div class="w-team-card w-team-card-06">
+                        <div class="w-team-profile">
+                            <img src="../web_assets/images/Imageteam-1.png" alt="Sarah Mitchell image">
+                        </div>
+                        <div class="w-team-information">
+                            <p class="w-paragraph w-team-name">Sarah Mitchell</p>
+                            <p class="w-paragraph w-team-position">Founder and CEO</p>
+                        </div>
+                    </div>
+                </div>
+            </div>            
         </section>
     </main>
 
     <!-- Footer -->
     <footer id="footer"></footer>
     <script src="../web_assets/js/footer-script.js"></script>
+    <script>
+        $(document).ready(function () {
+            let checkFooter = setInterval(function () {
+                let scrollToTopButton = $('#scrollToTop');
+
+                if (scrollToTopButton.length) {
+                    clearInterval(checkFooter);
+
+                    $(document).on('click', '#scrollToTop', function (e) {
+                        e.preventDefault();
+                        $('html, body').animate({ scrollTop: 0 }, 800, 'swing');
+                    });
+                }
+            }, 500);
+        });
+    </script>
 </body>
 
 </html>

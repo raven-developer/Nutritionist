@@ -2,7 +2,7 @@
 @use '_var.scss'as *;
 
 @media screen and (min-width: 1440px) {
-    .w-categor, .w-category-container {
+    .w-categor, .w-category-wrapper {
         justify-content: center;
     }
 }
@@ -24,11 +24,11 @@
         }
     }
 
-    .w-category-container, .w-category {
+    .w-category-wrapper, .w-category {
         justify-content: flex-start;
         flex-wrap: nowrap;
 
-        .w-list-category {
+        .w-category-label {
             padding: 12px 18px;
         }
     }
@@ -122,7 +122,7 @@
 
     .w-plan-section .w-card-grid,
     .w-testimonial-section .w-card-grid,
-    .w-card-grid {
+    .w-card-grid, .w-team-grid  {
         @include grid-2-col(1);
     }
 
@@ -287,9 +287,9 @@
         }
     }
 
-    .w-category-container {
+    .w-category-wrapper {
 
-        .w-list-category {
+        .w-category-label {
             &:first-child {
                 margin-left: 28px;
             }
