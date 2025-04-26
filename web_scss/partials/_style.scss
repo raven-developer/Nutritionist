@@ -53,7 +53,7 @@ body {
     max-width: 1596px;
     width: 100%;
     margin: 0 auto;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .w-inner-col {
@@ -159,7 +159,7 @@ header {
     align-items: center;
     position: relative;
     padding: 8px;
-    outline: 1px solid $green70;
+    border: 1px solid $green70;
     width: max-content;
     border-radius: 50px / 50px;
     background-color: $green97;
@@ -299,7 +299,7 @@ header {
     }
 
     &:hover {
-        outline-color: $dgreen40;
+        border-color: $dgreen40;
         box-shadow: 20px 20px 60px rgba(26, 49, 41, 0.07),
             -20px -20px 60px #ffffff;
     }
@@ -405,7 +405,7 @@ header {
     }
 
     &:hover {
-        outline-color: $dgreen40;
+        border-color: $dgreen40;
         box-shadow: 20px 20px 60px rgba(26, 49, 41, 0.07),
             -20px -20px 60px #ffffff;
     }
@@ -432,7 +432,7 @@ header {
     margin: 14px 0;
     width: auto;
     background-color: $dgreen20;
-    outline: 1px solid $dgreen25;
+    border: 1px solid $dgreen25;
     border-radius: $round-border-small;
 
     .w-cta-content {
@@ -534,7 +534,7 @@ header {
 }
 
 .w-item-outer-container {
-    outline: 1px solid $green85;
+    border: 1px solid $green85;
     border-radius: $round-border-default;
     overflow: hidden;
 }
@@ -652,7 +652,7 @@ header {
     .w-category-label {
         padding: 14px 20px;
         color: $white;
-        outline: 1px solid transparent;
+        border: 1px solid transparent;
         border-radius: $round-border-small;
         transition: all 300ms ease;
         text-align: center;
@@ -660,7 +660,7 @@ header {
         flex-shrink: 0;
 
         &:hover:not(.selected) {
-            outline: 1px solid $dgreen30;    
+            border: 1px solid $dgreen30;    
         }
 
         &:first-child {
@@ -685,7 +685,7 @@ header {
 
 .selected {
     background-color: $dgreen25;
-    outline: 1px solid $dgreen30 !important;    
+    border: 1px solid $dgreen30 !important;    
     border-radius: $round-border-small;
 }
 
@@ -694,4 +694,37 @@ header {
     @include grid-2-col(4);
     align-items: stretch;
     margin-top: 70px;
+    gap: 50px 30px;
+}
+
+.w-team-card {
+    position: relative;
+    overflow: hidden;
+
+    .w-team-profile {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        z-index: 0;
+    }
+
+    .w-team-information {
+        position: relative;
+        padding: 30px;
+        gap: 8px;
+        background-color: $green95;
+        border-top-right-radius: 20px;
+        width: calc(100% - 40px);
+        bottom: 0;
+        z-index: 1;
+        margin-top: -52px;
+    }
+    
+    .w-team-name {
+        @include font-setting(600, normal, 1.2rem, $dgreen15);
+    }
+    
+    .w-team-position {
+        @include font-setting(400, normal, .9rem, $gray30);
+    }
 }

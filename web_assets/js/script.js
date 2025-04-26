@@ -1,3 +1,6 @@
+//To be added once all done since its too risky
+//window.location.href = window.location.href.replace('/web_pages', '');
+
 document.addEventListener("DOMContentLoaded", function () {
     // Load Navbar
     fetch("../web_include/nav.html")

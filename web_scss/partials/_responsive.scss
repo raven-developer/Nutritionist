@@ -67,6 +67,10 @@
     .w-story-item .w-item-image img {
         height: 300px;
     }
+
+    .w-team-grid  {
+        @include grid-2-col(3);
+    }
 }
 
 //Tablet to Mobile
@@ -122,8 +126,12 @@
 
     .w-plan-section .w-card-grid,
     .w-testimonial-section .w-card-grid,
-    .w-card-grid, .w-team-grid  {
+    .w-card-grid {
         @include grid-2-col(1);
+    }
+
+    .w-team-grid  {
+        @include grid-2-col(2);
     }
 
     .w-testimonial-top,
@@ -298,5 +306,12 @@
                 margin-right: 28px;
             }
         }
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .w-team-grid  {
+        @include grid-2-col(1);
     }
 }

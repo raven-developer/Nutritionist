@@ -61,7 +61,7 @@ a,
 
 .w-secondary-button {
     @include button-setting($green95);
-    outline: 1px solid $green85;
+    border: 1px solid $green85;
     padding: 16px 20px 14px 20px;
 }
 
@@ -73,11 +73,11 @@ a,
 
 .w-secondary-button {
     @include button-setting($green95);
-    outline: 1px solid $green85;
+    border: 1px solid $green85;
     padding: 16px 20px 14px 20px;
 
     &:hover {
-        outline-color: $dgreen15;
+        border-color: $dgreen15;
     }
 }
 

@@ -252,7 +252,7 @@ $hero-max-height: 820px;
 
 @mixin card-background ($bg-color) {
     background-color: $bg-color;
-    outline: 1px solid $green85;
+    border: 1px solid $green85;
 }
 
 @mixin limit-line ($limit) {
