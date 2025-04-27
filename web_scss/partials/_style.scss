@@ -53,7 +53,6 @@ body {
     max-width: 1596px;
     width: 100%;
     margin: 0 auto;
-    overflow: hidden;
 }
 
 .w-inner-col {
@@ -316,6 +315,10 @@ header {
     @include grid-2-col(3);
 }
 
+.grid-not-stretch {
+    align-items: start;
+}
+
 .w-testimonial-card {
     @include flex-column;
     align-items: stretch;
@@ -373,12 +376,12 @@ header {
 
 
 .w-plan-card {
-    padding: 50px;
+    padding: 40px;
     transition: all 0.3s ease-in-out;
     box-shadow: none;
     justify-content: space-between;
 
-    .w-plan-heading {
+    .w-plan-heading-container {
         @include flex-column;
     }
 
@@ -409,6 +412,34 @@ header {
         box-shadow: 20px 20px 60px rgba(26, 49, 41, 0.07),
             -20px -20px 60px #ffffff;
     }
+
+    .w-plan-details-container {
+        @include flex-column;
+    }
+
+    .w-plan-details-list {
+        border-radius: $round-border-small;
+        background-color: $green90;
+        border: 1px solid $green85;
+    }
+
+    .w-plan-details-note {
+        border-radius: $round-border-small;
+        background-color: $dgreen20;
+    }
+
+    .w-plan-details-note .w-plan-details-label {
+        color: $white;
+    }
+
+    .w-plan-details-label:not(:last-child, .w-plan-details-note .w-plan-details-label) {
+        border-bottom: 1px solid $green85;
+    }
+
+    .w-plan-details-label {
+        padding: 16px 20px;
+    }
+
 }
 
 .w-nav-cta {
