@@ -812,6 +812,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 .w-inner-col-center .w-heading {
   width: 100%;
@@ -827,7 +828,8 @@ body {
   width: 100%;
 }
 
-.w-container {
+.w-container,
+.w-figure-container {
   max-width: 1596px;
   width: 100%;
   margin: 0 auto;
@@ -999,7 +1001,9 @@ header {
   text-align: unset;
 }
 
-.w-feature-card, .w-achievement-card, .w-process-card {
+.w-feature-card,
+.w-achievement-card,
+.w-process-card {
   padding: 40px 50px;
   max-width: 996px;
   box-shadow: none;
@@ -1269,7 +1273,8 @@ header {
   width: 100%;
   border-radius: 12px 12px 0 0;
 }
-.w-header-style-02 .w-card .w-heading, .w-header-style-02 .w-card .w-paragraph {
+.w-header-style-02 .w-card .w-heading,
+.w-header-style-02 .w-card .w-paragraph {
   text-align: center;
 }
 .w-header-style-02 .w-header-content {
@@ -1493,6 +1498,92 @@ header {
   font-style: normal;
   font-size: 0.9rem;
   color: #4C4C4D;
+}
+
+.w-table-container {
+  padding: 40px;
+  table-layout: fixed;
+  background-color: #F6FBE9;
+  border: 1px solid #E5F5BD;
+  border-radius: 12px;
+}
+
+.w-features-table {
+  max-width: 100%;
+  width: 100%;
+}
+.w-features-table .w-table-header {
+  font-weight: 700;
+  color: white;
+  position: relative;
+}
+.w-features-table .w-table-header:first-child {
+  text-align: left;
+}
+.w-features-table .w-table-header .w-table-header-label {
+  background-color: #234338;
+  padding: 20px 30px;
+  border-radius: 8px;
+  position: inherit;
+}
+.w-features-table .w-row-label {
+  padding: 30px;
+  vertical-align: middle;
+}
+.w-features-table .w-row-label:not(.w-features-table .w-row-label:first-child) {
+  text-align: center;
+}
+.w-features-table .w-row-label .w-table-icon {
+  max-width: 28px;
+  max-height: 28px;
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 1/1;
+  margin: 0 auto;
+}
+.w-features-table th,
+.w-features-table td {
+  padding: 0 30px;
+}
+.w-features-table th:first-child,
+.w-features-table td:first-child {
+  padding-left: 0;
+}
+.w-features-table th:not(.w-features-table th:first-child,
+.w-features-table td:first-child),
+.w-features-table td:not(.w-features-table th:first-child,
+.w-features-table td:first-child) {
+  width: 20%;
+}
+.w-features-table .w-table-header, .w-features-table .w-row-label {
+  border: 1px solid #DCF1A7;
+}
+.w-features-table td:first-child {
+  padding-left: 30px;
+  border-top: none;
+  border-left: none;
+}
+.w-features-table td:last-child {
+  border-top: none;
+  border-right: none;
+}
+.w-features-table tr:first-child td, .w-features-table tr .w-table-header {
+  border-top: none;
+}
+.w-features-table tr:last-child td, .w-features-table tr .w-table-header {
+  border-bottom: none;
+}
+.w-features-table .w-table-header {
+  padding-top: 30px;
+  border-bottom: none;
+  border-top: none;
+}
+.w-features-table .w-table-header:first-child {
+  border-left: none;
+}
+.w-features-table .w-table-header:last-child {
+  border-top: none;
+  border-right: none;
 }
 
 @media screen and (min-width: 1440px) {

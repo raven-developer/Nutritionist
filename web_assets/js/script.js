@@ -31,5 +31,22 @@ document.addEventListener("DOMContentLoaded", function () {
         toggle_yearly.classList.add("enabled");
         toggle_monthly.classList.remove("enabled");
     });
-});
 
+    const features_table = document.getElementById("w-features-table");
+    const table_row = document.querySelectorAll(".w-row-label");
+
+    table_row.forEach(td => {
+        const value = td.textContent.trim();
+        switch (value) {
+            case "check":
+                td.innerHTML = '<div class="w-table-icon"><img src="../web_assets/images/Check.png" alt="Check Icon"></div>';
+                break;
+            case "cross":
+                td.innerHTML = '<div class="w-table-icon"><img src="../web_assets/images/cross.png" alt="Cross Icon"></div>';
+                break;
+            default:
+                break;
+        }
+    });
+
+});

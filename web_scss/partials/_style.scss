@@ -33,6 +33,7 @@ body {
 .w-inner-col-center {
     @include flex-column;
     @include flex-center();
+    width: 100%;
 
     .w-heading {
         width: 100%;
@@ -49,7 +50,8 @@ body {
     }
 }
 
-.w-container {
+.w-container,
+.w-figure-container {
     max-width: 1596px;
     width: 100%;
     margin: 0 auto;
@@ -222,7 +224,9 @@ header {
     }
 }
 
-.w-feature-card, .w-achievement-card, .w-process-card {
+.w-feature-card,
+.w-achievement-card,
+.w-process-card {
     padding: 40px 50px;
     max-width: 996px;
     //transition: all 0.3s ease-in-out;
@@ -504,7 +508,7 @@ header {
     justify-content: center;
     position: relative;
 
-    + main .w-section.w-category-section:first-child {
+    +main .w-section.w-category-section:first-child {
         padding-top: 0;
     }
 
@@ -515,11 +519,12 @@ header {
         width: 100%;
         border-radius: 12px 12px 0 0;
 
-        .w-heading, .w-paragraph {
+        .w-heading,
+        .w-paragraph {
             text-align: center;
         }
     }
-    
+
     .w-header-content {
         @include flex-column;
         max-width: 1280px;
@@ -576,7 +581,7 @@ header {
 
     &:nth-child(even) {
         flex-direction: row-reverse;
-        
+
         .w-item-content {
             align-items: flex-end;
         }
@@ -626,7 +631,7 @@ header {
     }
 }
 
-.w-cta-section{
+.w-cta-section {
     .w-card {
         padding: 80px;
         flex-direction: row;
@@ -638,6 +643,7 @@ header {
     .w-button {
         padding: 26px 28px 24px 28px;
     }
+
     .w-cta-section-content {
         @include flex-column
     }
@@ -691,7 +697,7 @@ header {
         flex-shrink: 0;
 
         &:hover:not(.selected) {
-            border: 1px solid $dgreen30;    
+            border: 1px solid $dgreen30;
         }
 
         &:first-child {
@@ -716,7 +722,7 @@ header {
 
 .selected {
     background-color: $dgreen25;
-    border: 1px solid $dgreen30 !important;    
+    border: 1px solid $dgreen30 !important;
     border-radius: $round-border-small;
 }
 
@@ -750,12 +756,118 @@ header {
         z-index: 1;
         margin-top: -52px;
     }
-    
+
     .w-team-name {
         @include font-setting(600, normal, 1.2rem, $dgreen15);
     }
-    
+
     .w-team-position {
         @include font-setting(400, normal, .9rem, $gray30);
     }
+}
+
+
+.w-table-container {
+    padding: 40px;
+    table-layout: fixed;
+    background-color: $green95;
+    border: 1px solid $green85;
+    border-radius: $round-border-default;
+}
+
+.w-features-table {
+    max-width: 100%;
+    width: 100%;
+
+    .w-table-header {
+        font-weight: 700;
+        color: white;
+        position: relative;
+
+        &:first-child {
+            text-align: left;
+        }
+
+        .w-table-header-label {
+            background-color: $dgreen20;
+            padding: 20px 30px;
+            border-radius: $round-border-small;
+            position: inherit;
+        }
+    }
+
+    .w-row-label {
+        padding: 30px;
+        vertical-align: middle;
+
+        &:not(&:first-child) {
+            text-align: center;
+        }
+
+        .w-table-icon {
+            max-width: 28px;
+            max-height: 28px;
+            height: 100%;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            margin: 0 auto;
+        }
+    }
+
+    th,
+    td {
+        padding: 0 30px;
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:not(&:first-child) {
+            width: 20%;
+        }
+    }
+
+    .w-table-header, .w-row-label {
+        border: 1px solid $green80;
+    }
+
+
+    td {
+        &:first-child {
+            padding-left: 30px;
+            border-top: none;
+            border-left: none;
+        }
+
+        &:last-child {
+            border-top: none;
+            border-right: none;
+        }
+    }
+
+    tr {
+        &:first-child td, .w-table-header {
+            border-top: none;
+        }
+
+        &:last-child td, .w-table-header {
+            border-bottom: none;
+        }
+    }
+
+    .w-table-header {
+        padding-top: 30px;
+        border-bottom: none;
+        border-top: none;
+
+        &:first-child {
+            border-left: none;
+        }
+
+        &:last-child {
+            border-top: none;
+            border-right: none;
+        }
+    }
+
 }
