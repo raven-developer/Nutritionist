@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 td.innerHTML = '<div class="w-table-icon"><img src="../web_assets/images/Check.png" alt="Check Icon"></div>';
                 break;
             case "cross":
-                td.innerHTML = '<div class="w-table-icon"><img src="../web_assets/images/cross.png" alt="Cross Icon"></div>';
+                td.innerHTML = '<div class="w-table-icon"><img src="../web_assets/images/Cross.png" alt="Cross Icon"></div>';
                 break;
             default:
                 break;

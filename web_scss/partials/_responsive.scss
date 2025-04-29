@@ -71,6 +71,12 @@
     .w-team-grid  {
         @include grid-2-col(3);
     }
+
+    .w-plan-section .w-card-grid,
+    .w-testimonial-section .w-card-grid,
+    .w-card-grid {
+        @include grid-2-col(2);
+    }
 }
 
 //Tablet to Mobile
