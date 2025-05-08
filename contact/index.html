@@ -70,7 +70,8 @@
             "https://www.linkedin.com/in/yourpage"
         ]
     }
-  </script>
+    </script>
+
 </head>
 
 <body data-page="about">
@@ -93,25 +94,147 @@
     <!-- Navbar -->
     <nav id="navbar"></nav>
 
-    <header class=" w-blog-header" id="w-blog-header">
-        <div class="w-container w-col-section w-center-col gap-large w-header-style-02">
-            <div class="w-inner-full gap-large w-card">
-                <div class="w-header-emblem">
-                    <img src="../web_assets/images/logo-emblem-header.png" alt="">
-                </div>
-                <div class="w-header-content gap-small">
-                    <h1 class="w-heading w-hero-heading">Contact Us</h1>
-                    <p class="w-paragraph">We value your feedback, questions, and concerns at Nutritionist. Our
-                        dedicated team is here to assist you and provide the support you need on your nutritional
-                        journey. Please don't hesitate to reach out to us using any of the following contact methods</p>
+    <header class="w-header-banner w-contact-header" id="w-contact-header">
+        <div class="w-container">
+            <div class="w-col-section w-center-col gap-70 w-header-style-02 w-flat-header">
+                <div class="w-inner-full gap-70 w-card">
+                    <div class="w-header-emblem">
+                        <img src="../web_assets/images/logo-emblem-header.png" alt="">
+                    </div>
+                    <div class="w-header-content gap-20">
+                        <h1 class="w-heading w-hero-heading">Contact Us</h1>
+                        <p class="w-paragraph">We value your feedback, questions, and concerns at Nutritionist. Our
+                            dedicated team is here to assist you and provide the support you need on your nutritional
+                            journey. Please don't hesitate to reach out to us using any of the following contact methods
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
+    <main class="w-main-home w-fold-section">
+
+        <section class="w-section w-partial-container w-contact-section" id="w-contact-section">
+            <div class="w-container">
+                <div class="w-inner-row">
+                    <div class="w-contact-wrapper w-dark-container gap-30">
+                        <div class="w-contact-card w-contact-email gap-20">
+                            <div class="w-contact-icon">
+                                <img src="../web_assets/images/email-icon.svg" alt="Email Icon">
+                            </div>
+                            <p class="w-paragraph">hello@squareup.com</p>
+                        </div>
+
+                        <div class="w-contact-card w-contact-phone gap-20">
+                            <div class="w-contact-icon">
+                                <img src="../web_assets/images/phone-icon.svg" alt="Phone Icon">
+                            </div>
+                            <p class="w-paragraph">+91 91813 23 2309</p>
+                        </div>
+
+                        <div class="w-contact-card w-contact-address gap-20">
+                            <div class="w-contact-icon">
+                                <img src="../web_assets/images/location-icon.svg" alt="Location Icon">
+                            </div>
+                            <p class="w-paragraph">Somewhere in the World</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section class="w-section w-contact-form-section" id="w-contact-form-section">
+            <div class="w-container w-row-section w-contact-container gap-70">
+                <div class="w-inner-col w-contact-form gap-50">
+                    <div class="w-container-header gap-20">
+                        <h2 class="w-heading w-section-heading">Send a Message</h2>
+                        <p class="w-paragraph">We'd love to hear from you! Please fill out the form below, and our team
+                            will get back to you as soon as possible.</p>  
+                    </div>
+                    <form class="w-form gap-50" id="contact-form" method="POST"
+                        action="https://example.com/submit-form">
+                        <div class="w-form-group gap-20">
+                            <div class="w-input-group gap-4">
+                                <label for="full-name" class="w-paragraph w-input-label">Full Name</label>
+                                <input class="w-form-input" type="text" name="" id="full-name"
+                                    placeholder="Enter your name" required>
+                            </div>
+                            <div class="w-input-group gap-4">
+                                <label for="full-name" class="w-paragraph w-input-label">Email Address</label>
+                                <input class="w-form-input" type="email" name="" id="email-add"
+                                    placeholder="Enter your email" required>
+                            </div>
+                            <div class="w-input-group gap-4">
+                                <label for="full-name" class="w-paragraph w-input-label">Phone Number</label>
+                                <input class="w-form-input" type="tel" name="" id="phone-num"
+                                    placeholder="Enter your phone number" required>
+                            </div>
+                            <div class="w-input-group gap-4">
+                                <label for="message" class="w-paragraph w-input-label">Message</label>
+                                <textarea class="w-form-input" id="message" maxlength="500"
+                                    placeholder="Enter your Message"></textarea>
+                            </div>
+                        </div>
+                        <button class="w-primary-button w-button"><span class="w-button-inner">Send
+                                Message</span></button>
+                    </form>
+                </div>
+                <div class="w-inner-col w-contact-map">
+                    <div class="w-map-container" id="map" style="height: 100%;"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-section w-cta-section" id="w-cta-section">
+            <div class="w-container w-row-section gap-70">
+                <div class="w-inner-full w-card">
+                    <div class="w-cta-section-content gap-20">
+                        <h2 class="w-heading w-section-heading">Are you ready to embark on a transformative journey towards better health and wellness?</h2>
+                        <p class="w-paragraph">Join us at Nutritionist and let us guide you on the path to a healthier and happier you.</p>
+                    </div>
+                    <a href="#contact-form" class="w-primary-button w-button"><span class="w-button-inner">Join Us
+                            Now</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <!-- Footer -->
     <footer id="footer"></footer>
     <script src="../web_assets/js/footer-script.js"></script>
+
+    <!-- Load Google Maps JavaScript API -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4SfSw6QR8Q971uRzY7UWymGQu0kPmlic&libraries=maps&callback=initMap"
+        async defer></script>
+
+    <script>
+        let map;
+
+        async function initMap() {
+            const { Map } = await google.maps.importLibrary("maps");
+
+            map = new Map(document.getElementById("map"), {
+                center: { lat: 14.600315437578914, lng: 120.98161884297505 },
+                zoom: 12,
+            });
+        }
+
+        $(document).ready(function () {
+            let checkFooter = setInterval(function () {
+                let scrollToTopButton = $('#scrollToTop');
+
+                if (scrollToTopButton.length) {
+                    clearInterval(checkFooter);
+
+                    $(document).on('click', '#scrollToTop', function (e) {
+                        e.preventDefault();
+                        $('html, body').animate({ scrollTop: 0 }, 800, 'swing');
+                    });
+                }
+            }, 500);
+        });
+    </script>
 </body>
 
 </html>

@@ -1,12 +1,29 @@
-@use 'partials/var.scss'as *;
-@use "partials/reset";
-@use "partials/footer";
-@use "partials/nav";
-@use "partials/global";
-@use "partials/style";
-@use "partials/responsive";
+@use 'partials/var.scss' as *;
+@use 'partials/reset';
+@use 'partials/footer';
+@use 'partials/nav';
+@use 'partials/global';
+@use 'partials/style';
+@use 'partials/responsive';
 
 html {
-    scroll-behavior: auto;
+  scroll-behavior: auto;
 }
 
+body {
+  background-color: $green97;
+  min-height: 100vh;
+}
+
+nav,
+footer {
+  position: relative;
+}
+
+.selected {
+  background-color: $dgreen20;
+
+  .w-button-inner {
+    color: $white;
+  }
+}

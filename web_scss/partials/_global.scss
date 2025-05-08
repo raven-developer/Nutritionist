@@ -1,102 +1,221 @@
 //Styles for Global Stlying
-@use '_var.scss'as *;
+@use '_var.scss' as *;
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-a,
-.w-paragraph,
-.w-heading {
-    @include font-family();
-}
-
-.w-paragraph {
-    @include font-setting(500, normal, 1rem, $gray30);
-    line-height: 1.5;
-
-    span:not(:last-child){
-        display: inline-block;
-        margin-bottom: 12px;
-    }
-}
-
-.w-heading {
-    line-height: 1;
-    @include font-setting(700, normal, inherit, $dgreen15);
-}
-
-.w-hero-heading {
-    @include font-setting(700, normal, 2.874rem, $dgreen15);
-}
-
-.w-section-heading, .w-plan-amount {
-    @include font-setting(700, normal, 2.488rem, $dgreen15);
-}
-
-.w-special-heading, .w-card-label {
-    @include font-setting(700, normal, 1.44rem, $dgreen15);
-}
-
-.w-plan-title {
-    @include font-setting(600, normal, 1.728rem, $dgreen15);
-}
-
-.w-par-bold {
-    @include font-setting(700, normal, inherit, $dgreen40);
-}
-
+//Buttons
 .w-button {
-    padding: 17px 20px 15px 20px;
-    height: fit-content;
+  padding: 17px 20px 15px;
+  height: fit-content;
 }
 
 .w-primary-button {
-    @include button-setting($green70);
+  @include button-setting($green70);
 }
 
 .w-secondary-button {
-    @include button-setting($green95);
-    border: 1px solid $green85;
-    padding: 16px 20px 14px 20px;
+  @include button-setting($green95);
+  border: 1px solid $green85;
+  padding: 16px 20px 14px 20px;
 }
 
 .w-button-inner {
-    @include font-family();
-    @include font-setting(600, normal, 1rem, $dgreen15);
-    line-height: 150%;
+  @include font-family();
+  @include font-setting(600, normal, 1rem, $dgreen15);
+  line-height: 150%;
 }
 
 .w-secondary-button {
-    @include button-setting($green95);
-    border: 1px solid $green85;
-    padding: 16px 20px 14px 20px;
+  @include button-setting($green95);
+  border: 1px solid $green85;
+  padding: 16px 20px 14px 20px;
 
-    &:hover {
-        border-color: $dgreen15;
-    }
+  &:hover {
+    border-color: $dgreen15;
+  }
 }
 
 .w-primary-button:hover {
-    @include button-setting($dgreen15);
+  @include button-setting($dgreen15);
 
-    .w-button-inner {
-        color: $green70;
-    }
+  .w-button-inner {
+    color: $green70;
+  }
 }
 
 .w-toggle-button {
-    @include button-setting(transparent);
+  @include button-setting(transparent);
 
-    .w-button-inner {
-        @include flex-row;
-        justify-content: center;
-        width: 72px;
-    }
+  .w-button-inner {
+    @include flex-row;
+    justify-content: center;
+    width: 72px;
+  }
 }
 
+//Flexbox
 
+//Gap
+.gap-70 {
+  gap: 70px;
+}
+
+.gap-60 {
+  gap: 60px;
+}
+
+.gap-50 {
+  gap: 50px;
+}
+
+.gap-40 {
+  gap: 40px;
+}
+
+.gap-30 {
+  gap: 30px;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+.gap-4 {
+  gap: 4px;
+}
+
+//Layouts
+.w-section:not(.w-section.w-cta-banner) {
+  position: relative;
+  width: 100%;
+  padding-block: 75px;
+}
+
+.w-container {
+  max-width: 1480px;
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: 20px;
+}
+
+.dark {
+  background-color: $dgreen15;
+
+  .w-primary-button:hover {
+    @include button-setting($white);
+
+    .w-button-inner {
+      color: $dgreen15;
+    }
+  }
+}
+
+//Custom Designs
+.w-bottom-border {
+  border-bottom: 3px solid #cbea7b;
+  max-width: max-content;
+  padding: 10px 0;
+}
+
+.w-content-wrapper.w-col {
+  @include center-x;
+}
+
+.w-section-header.w-col {
+  max-width: 630px;
+  @include center-x;
+}
+
+.is-center {
+  .w-section-heading,
+  .w-paragraph {
+    text-align: center;
+  }
+}
+//Type of Cards
+.w-icon-card {
+  @include flex-column;
+  @include card-bg($green95);
+  border-radius: $round-default;
+  justify-content: start;
+  padding: 40px;
+
+  .w-card-label-block {
+    @include center-x;
+  }
+
+  .w-card-label {
+    width: 100%;
+    text-align: left;
+  }
+
+  .w-card-icon {
+    @include center-x;
+    @include center-y;
+    flex: 0 0 auto;
+    padding: 14px;
+    height: 68px;
+    width: 68px;
+    background-color: $green70;
+    border-radius: $round-small;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      aspect-ratio: 1 / 1;
+    }
+  }
+}
+
+.w-image-card {
+  @include flex-column;
+  @include card-bg($green95);
+  border-radius: $round-default;
+  justify-content: start;
+  padding: 40px;
+  transition: all 0.4s ease-in-out;
+  box-shadow: none;
+
+  .w-feature-image-block {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    border-radius: $round-default;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: all 0.4s ease-in-out;
+      transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+        skew(0deg, 0deg);
+      transform-style: preserve-3d;
+      transition: transform 0.4s ease;
+    }
+  }
+  .w-card-details-block {
+    @include flex-column;
+    justify-content: start;
+  }
+
+  .w-card-label-block {
+    @include flex-column;
+  }
+
+  &:hover {
+    border-color: $dgreen40;
+    box-shadow: 20px 20px 60px rgba(26, 49, 41, 0.07), -20px -20px 60px #ffffff;
+
+    .w-feature-image-block {
+      img {
+        transform: translate3d(0, 0, 0) scale3d(1.1, 1.1, 1.1) rotateX(0deg) rotateY(0deg)
+          rotateZ(0deg) skew(0deg, 0deg);
+      }
+    }
+  }
+}

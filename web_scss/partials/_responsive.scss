@@ -1,323 +1,62 @@
 //Styles for responsive only
-@use '_var.scss'as *;
+@use '_var.scss' as *;
 
+//Desktop
 @media screen and (min-width: 1440px) {
-    .w-categor, .w-category-wrapper {
-        justify-content: center;
-    }
+  //Grid Layouts
+  .w-grid-2-col {
+    @include grid-col(2);
+  }
+
+  .w-grid-3-col {
+    @include grid-col(3);
+  }
+
+  .w-grid-4-col {
+    @include grid-col(4);
+  }
 }
 
-//Laptop Large
-@media screen and (max-width: 1440px) {
-    .w-container {
-        margin: 0 80px;
-    }
+//Laptop
+@media screen and (max-width: 1439px) and (min-width: 993px) {
+  //Grid Layouts
+  .w-grid-2-col {
+    @include grid-col(2);
+  }
 
-    .w-step-card {
-
-        .w-step-number span {
-            font-size: 100px;
-        }
-
-        .w-card {
-            margin-top: 92px;
-        }
-    }
-
-    .w-category-wrapper, .w-category {
-        justify-content: flex-start;
-        flex-wrap: nowrap;
-
-        .w-category-label {
-            padding: 12px 18px;
-        }
-    }
+  .w-grid-3-col,
+  .w-grid-4-col {
+    @include grid-col(3);
+  }
 }
 
-//Laptop Small
-@media screen and (max-width: 1280px) and (min-width: 993px) {
-    .w-hero-section {
-        padding: 16px 0;
-    }
+//Tablet
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  //Grid Layouts
+  .w-grid-2-col {
+    @include grid-col(1);
+  }
 
-    .w-hero-heading {
-        font-size: 3.288rem;
-    }
+  .w-grid-3-col,
+  .w-grid-4-col {
+    @include grid-col(2);
+  }
 
-    .w-hero-layout {
-        $hero-max-height: 200vh;
-        max-height: $hero-max-height;
-        height: auto;
-
-        .w-hero-image {
-            max-height: $hero-max-height;
-            height: 100%;
-        }
-
-        .w-hero-content {
-            margin: 60px 0;
-            padding-left: 40px;
-        }
-    }
-
-    .w-story-item .w-item-content {
-        padding: 40px;
-    }
-
-    .w-story-item .w-item-image img {
-        height: 300px;
-    }
-
-    .w-team-grid  {
-        @include grid-2-col(3);
-    }
-
-    .w-plan-section .w-card-grid,
-    .w-testimonial-section .w-card-grid,
-    .w-card-grid {
-        @include grid-2-col(2);
-    }
+  .w-container {
+    padding: 0 16px;
+  }
 }
 
-//Tablet to Mobile
-@media screen and (max-width: 992px) {
-    .w-container {
-        margin: 0 16px;
-    }
-
-    html {
-        font-size: 16px
-    }
-
-    .w-heading:not(.w-hero-heading) {
-        line-height: 1.2;
-    }
-
-    .gap-large {
-        gap: 50px;
-    }
-
-    .w-hero-heading {
-        font-size: 2.25rem;
-    }
-
-    .w-section-heading {
-        font-size: 1.802rem;
-    }
-
-    .w-card-label {
-        font-size: 1.266rem;
-    }
-
-    .w-plan-title {
-        font-size: 1.424rem;
-    }
-
-    .w-paragraph {
-        font-size: 15px;
-        letter-spacing: .5px;
-    }
-
-    .gap-default {
-        gap: 24px;
-    }
-
-    .w-cta-container.gap-medium {
-        column-gap: 18px;
-    }
-
-    .w-cta-content.gap-xsmall {
-        column-gap: 12px;
-    }
-
-    .w-plan-section .w-card-grid,
-    .w-testimonial-section .w-card-grid,
-    .w-card-grid {
-        @include grid-2-col(1);
-    }
-
-    .w-team-grid  {
-        @include grid-2-col(2);
-    }
-
-    .w-testimonial-top,
-    .w-feature-card,
-    .w-achievement-card,
-    .w-process-card {
-        padding: 24px !important;
-    }
-
-    .w-plan-card,
-    .w-blog-card,
-    .w-welcome-section .w-card,
-    .w-cta-section .w-card {
-        padding: 28px;
-    }
-
-    .w-testimonial-bottom {
-        padding: 18px 24px !important;
-    }
-
-    .w-card-icon {
-        padding: 12px;
-
-        img {
-            height: 24px;
-            aspect-ratio: 1 / 1;
-        }
-    }
-
-    h2.w-plan-amount {
-        font-size: 2.375rem;
-    }
-
-    .w-hero-bg {
-        display: none;
-        ;
-    }
-
-    .w-hero-section {
-        max-height: 100%;
-    }
-
-    .w-hero-layout {
-        @include flex-column;
-        flex-direction: column-reverse;
-
-        .gap-large {
-            gap: 50px;
-        }
-
-        .w-row-content {
-            justify-content: center;
-
-        }
-
-        .w-client-ratings {
-            flex-direction: column-reverse;
-
-            .w-client {
-                height: 40px;
-                width: 40px;
-            }
-
-            .w-paragraph {
-                font-size: 18px;
-            }
-        }
-
-        .w-hero-content {
-            padding: 0;
-            margin: 30px 0 -30px 0;
-
-            .w-special-header {
-                display: flex;
-                justify-content: center;
-            }
-
-            h1.w-heading {
-                text-align: center;
-            }
-
-            .w-paragraph:not(.w-client-ratings .w-paragraph) {
-                text-align: center;
-            }
-        }
-
-        .w-hero-image {
-            aspect-ratio: 4 / 3;
-            width: 100%;
-
-            img {
-                height: unset;
-                top: -112%;
-            }
-        }
-    }
-
-    .w-header-style-02 {
-
-        .w-card {
-            padding: 28px;
-        }
-
-        .w-header-content {
-            @include flex-column;
-            max-width: 1280px;
-            z-index: 1;
-        }
-
-        .w-header-emblem {
-            width: 62px;
-            height: 62px;
-        }
-    }
-
-    .w-cta-section {
-        .w-card {
-            flex-direction: column;
-            gap: 50px;
-        }
-
-        .w-cta-section-content {
-            text-align: center;
-        }
-
-        .w-button {
-            padding: 26px 28px 24px 28px;
-            max-width: 100%;
-            text-align: center;
-        }
-    }
-
-    .w-section {
-        padding: 50px 0;
-    }
-
-    header {
-        padding-top: 50px;
-    }
-
-    .w-story-item,
-    .w-story-item:nth-child(even),
-    .w-story-item:nth-child(odd) {
-        flex-direction: column;
-
-        .w-item-content {
-            align-items: flex-start;
-            padding: 30px;
-        }
-
-        .w-item-divider {
-            width: 100%;
-            height: 12px;
-            background-color: $green70;
-            flex-shrink: 0;
-        }
-
-        .w-heading,
-        .w-paragraph {
-            text-align: left;
-        }
-    }
-
-    .w-category-wrapper {
-
-        .w-category-label {
-            &:first-child {
-                margin-left: 28px;
-            }
-
-            &:last-child {
-                margin-right: 28px;
-            }
-        }
-    }
-}
-
-
+//Mobile
 @media screen and (max-width: 767px) {
-    .w-team-grid  {
-        @include grid-2-col(1);
-    }
+  //Grid Layouts
+  .w-grid-2-col,
+  .w-grid-3-col,
+  .w-grid-4-col {
+    @include grid-col(1);
+  }
+
+  .w-container {
+    padding: 0 16px;
+  }
 }

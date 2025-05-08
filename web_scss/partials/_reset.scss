@@ -124,7 +124,6 @@ a {
   color: inherit;
 }
 
-
 input,
 button,
 textarea,
@@ -140,24 +139,25 @@ html {
   font-size: 18px;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
 * {
   font-size: 18px;
 }
 
-
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   overflow-x: clip; /* or hidden */
   max-width: 100vw;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+img {
+  height: 100%;
+  width: 100%;
 }
