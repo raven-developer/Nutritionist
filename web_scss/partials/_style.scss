@@ -52,17 +52,15 @@
   .w-hero-image {
     flex: 0.9;
     max-height: $hero-max-height;
-    height: inherit;
+    height: 100%;
     overflow: hidden;
     box-sizing: border-box;
     border-radius: 40px;
+    object-fit: cover;
 
     img {
-      position: relative;
-      bottom: 40px;
       height: 100%;
       width: 100%;
-      object-fit: cover;
     }
   }
 
@@ -186,4 +184,56 @@
   padding: 10px;
   @include card-bg(transparent);
   border-radius: $round-small;
+}
+
+.w-toggle-button {
+  min-width: 130px;
+
+  .w-button-inner {
+    white-space: nowrap;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.w-plan-card {
+  .w-plan-heading-block {
+    @include flex-column;
+  }
+
+  .w-plan-price-block {
+    @include flex-row;
+    @include center-x;
+    position: relative;
+  }
+  .w-plan-button-block {
+    @include flex-column;
+    position: relative;
+
+    .w-button {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+.w-plan-card.is-highlighted {
+  @include card-bg($dgreen15);
+
+  .w-heading {
+    color: $white;
+  }
+
+  .w-paragraph {
+    color: $gray95;
+    opacity: 0.8;
+  }
+
+  .w-primary-button:hover {
+    background-color: $white;
+
+    .w-button-inner {
+      color: $dgreen15;
+    }
+  }
 }

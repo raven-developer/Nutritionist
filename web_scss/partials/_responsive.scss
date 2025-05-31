@@ -33,17 +33,24 @@
 //Tablet
 @media screen and (max-width: 992px) and (min-width: 768px) {
   //Grid Layouts
-  .w-grid-2-col {
-    @include grid-col(1);
-  }
-
+  .w-grid-2-col,
   .w-grid-3-col,
   .w-grid-4-col {
-    @include grid-col(2);
+    @include grid-col(1);
   }
 
   .w-container {
     padding: 0 16px;
+  }
+
+  @media screen and (max-width: 992px) {
+    .w-hero-wrapper.w-row {
+      flex-direction: column;
+    }
+
+    .w-hero-image {
+      display: none;
+    }
   }
 }
 

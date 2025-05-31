@@ -1,0 +1,200 @@
+// Styles for Footer Only
+@use '_var.scss' as *;
+
+footer {
+  background-color: $dgreen15;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.w-footer-section {
+  @include flex-column;
+  justify-content: center;
+  position: relative;
+  padding: 50px 0;
+}
+
+.w-inner-footer {
+  @include flex-row;
+  justify-content: space-between;
+
+  .w-paragraph {
+    color: $white;
+  }
+}
+
+.footer-logo {
+  width: 100%;
+  height: 45px;
+  margin-right: auto;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.w-copyright .w-paragraph {
+  color: $dgreen90;
+}
+
+.footer-menu {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  height: auto;
+
+  .menu-link {
+    @include flex-row;
+  }
+}
+
+.w-back {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin-left: auto;
+
+  .w-back-to-top-button {
+    cursor: pointer;
+  }
+
+  .back-to-top {
+    @include flex-row;
+    @include center-y;
+
+    .back-to-top-arrow {
+      padding: 14px;
+      background-color: $dgreen20;
+      border-radius: 50%;
+      image-rendering: -webkit-optimize-contrast;
+      outline: 1px solid $dgreen25;
+    }
+  }
+}
+
+.w-footer-contact {
+  background-color: $dgreen20;
+  outline: 1px solid $dgreen25;
+  padding: 16px 30px 16px 20px;
+  border-radius: $round-small;
+  @include flex-row;
+  justify-content: space-between;
+
+  .w-inner-contact {
+    @include flex-row;
+  }
+
+  .w-contact-card {
+    @include flex-row;
+    @include center-y;
+    padding: 14px;
+    border-radius: 6px;
+  }
+}
+
+.max-200 {
+  max-width: 200px;
+}
+
+.w-ghost-button {
+  outline: 1px solid $dgreen25;
+  transition: outline-color 0.3s ease-in-out;
+
+  &:hover {
+    outline-color: $green70;
+  }
+}
+
+.w-custom-button {
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    .w-paragraph {
+      color: $green70;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .back-to-top-arrow {
+      outline-color: $green70;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  footer {
+    .w-footer-section {
+      padding: 30px 0;
+    }
+
+    .w-footer-section.gap-default {
+      gap: 50px;
+    }
+
+    .w-footer-info {
+      display: grid;
+      grid-template-areas:
+        'logo back'
+        'menu menu';
+      grid-template-columns: 1fr 1fr;
+      row-gap: 40px;
+    }
+
+    .footer-logo {
+      grid-area: logo;
+      justify-self: start;
+    }
+
+    .w-back {
+      grid-area: back;
+      justify-self: end;
+    }
+
+    .footer-menu {
+      grid-area: menu;
+
+      .menu-link {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .menu-item {
+        width: 100%;
+      }
+    }
+
+    .footer-logo {
+      width: 100%;
+      height: 40px;
+    }
+
+    .back-to-top-arrow {
+      padding: 12px;
+
+      img {
+        height: 24px;
+        width: 24px;
+      }
+    }
+
+    .w-inner-contact,
+    .w-footer-contact {
+      @include flex-column;
+      gap: 20px;
+    }
+
+    .w-footer-contact {
+      padding: 20px;
+    }
+
+    .w-inner-contact {
+      width: 100%;
+    }
+
+    .w-contact-card {
+      justify-content: center;
+    }
+  }
+}

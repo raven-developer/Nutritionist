@@ -303,6 +303,7 @@ $hero-max-height: 820px;
   border-radius: $round-small;
   transition: all 350ms ease-in-out;
   cursor: pointer;
+  display: block;
 }
 
 //Keyframes
@@ -360,7 +361,7 @@ textarea {
 }
 
 .w-section-heading,
-.w-plan-amount {
+.w-plan-price {
   @include font-setting(700, normal, 2.488rem, $dgreen15);
 }
 
@@ -369,7 +370,7 @@ textarea {
   font-size: 1.44rem;
 }
 
-.w-plan-title,
+.w-plan-heading,
 .w-card-label-large {
   font-size: 1.728rem;
 }

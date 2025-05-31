@@ -110,6 +110,14 @@
       color: $dgreen15;
     }
   }
+
+  .w-paragraph {
+    color: $gray95;
+  }
+
+  .w-heading {
+    color: $white;
+  }
 }
 
 //Custom Designs
@@ -218,4 +226,12 @@
       }
     }
   }
+}
+
+.w-default-card {
+  @include flex-column;
+  @include card-bg($green95);
+  border-radius: $round-default;
+  justify-content: start;
+  padding: 40px;
 }
